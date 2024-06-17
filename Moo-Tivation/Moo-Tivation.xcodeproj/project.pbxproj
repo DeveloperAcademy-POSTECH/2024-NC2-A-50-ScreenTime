@@ -32,6 +32,8 @@
 		3574C09F2C1FE9DE003D3592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3574C09E2C1FE9DE003D3592 /* Assets.xcassets */; };
 		3574C0A32C1FE9DE003D3592 /* ScreenTimeWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3574C0942C1FE9DD003D3592 /* ScreenTimeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F007611F2C20016F00BAF311 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007611E2C20016F00BAF311 /* Color.swift */; };
+		F0CC6EFC2C202EE900AF233A /* SpoilAppSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC6EFB2C202EE900AF233A /* SpoilAppSettingView.swift */; };
+		F0CC6EFE2C20486100AF233A /* TimeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC6EFD2C20486100AF233A /* TimeSettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		3574C0A02C1FE9DE003D3592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3574C0A72C1FE9EF003D3592 /* ScreenTimeWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenTimeWidgetExtension.entitlements; sourceTree = "<group>"; };
 		F007611E2C20016F00BAF311 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F0CC6EFB2C202EE900AF233A /* SpoilAppSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoilAppSettingView.swift; sourceTree = "<group>"; };
+		F0CC6EFD2C20486100AF233A /* TimeSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,8 @@
 			children = (
 				3570B18F2C1FCDFC00C7D203 /* Component */,
 				3570B18D2C1FCDDD00C7D203 /* MainView.swift */,
+				F0CC6EFB2C202EE900AF233A /* SpoilAppSettingView.swift */,
+				F0CC6EFD2C20486100AF233A /* TimeSettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -442,10 +448,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CC6EFE2C20486100AF233A /* TimeSettingView.swift in Sources */,
 				3570B1E32C1FD18F00C7D203 /* MonitoringApplication.swift in Sources */,
 				3570B1E12C1FD15700C7D203 /* ExampleComponentView.swift in Sources */,
 				3570B1E72C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
 				3570B18E2C1FCDDD00C7D203 /* MainView.swift in Sources */,
+				F0CC6EFC2C202EE900AF233A /* SpoilAppSettingView.swift in Sources */,
 				3527289D2C1FCCFE00DD859E /* Moo_TivationApp.swift in Sources */,
 				F007611F2C20016F00BAF311 /* Color.swift in Sources */,
 			);
