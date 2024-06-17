@@ -25,7 +25,7 @@ struct TimeSettingView: View {
                             .scaledToFit()
                             .frame(width: 17, height: 22)
                     })
-                }.padding()
+                }.padding(.leading, 25)
                 
                 HStack {
                     
@@ -40,7 +40,7 @@ struct TimeSettingView: View {
                         .foregroundStyle(AppColor.blackTypo25)
                     
                     
-                } .padding(.horizontal)
+                } .padding(.trailing, 25)
                 
                 Spacer().frame(height: 40)
                 
@@ -74,6 +74,7 @@ struct TimeSettingView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(Color.white)
                             .frame(height: 230)
+                            .padding(.horizontal, 8)
                         HStack {
                                 Picker("", selection: $hours){
                                     ForEach(0..<12, id: \.self) { i in
@@ -103,7 +104,7 @@ struct TimeSettingView: View {
                     }, label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
-                                .frame(width: 369, height: 56)
+                                .frame(height: 56)
                             
                             Text("다음")
                                 .font(.system(size: 16, weight: .semibold))

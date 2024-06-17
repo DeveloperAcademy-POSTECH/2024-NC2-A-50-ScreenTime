@@ -22,10 +22,10 @@ struct SpoilAppSettingView: View {
                             .scaledToFit()
                             .frame(width: 17, height: 22)
                     })
-                }.padding()
+                }.padding(.leading, 25)
                 
                 HStack {
-                   
+                    
                     Spacer()
                     
                     Text("1")
@@ -37,7 +37,7 @@ struct SpoilAppSettingView: View {
                         .foregroundStyle(AppColor.blackTypo25)
                     
                     
-                } .padding(.horizontal)
+                } .padding(.trailing, 25)
                 
                 Spacer().frame(height: 40)
                 
@@ -82,7 +82,8 @@ struct SpoilAppSettingView: View {
                     
                     RoundedRectangle(cornerRadius: 10) //앱을 정해보세요.
                         .foregroundStyle(Color.white)
-                        .frame(width: 369, height: 56)
+                        .frame(height: 56)
+                        .padding(.horizontal, 8)
                     
                     Spacer()
                 }
@@ -106,12 +107,12 @@ struct SpoilAppSettingView: View {
                     } label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
-                                .frame(width: 369, height: 56)
+                                .frame(height: 56)
                             
                             Text("다음")
                                 .font(.system(size: 16, weight: .semibold))
                                 .foregroundColor(.white)
-                                                    }
+                        }
                     }
                     
                     Spacer()
