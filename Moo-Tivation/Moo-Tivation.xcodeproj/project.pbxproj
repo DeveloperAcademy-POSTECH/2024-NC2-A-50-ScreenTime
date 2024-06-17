@@ -1,0 +1,738 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3527289D2C1FCCFE00DD859E /* Moo_TivationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3527289C2C1FCCFE00DD859E /* Moo_TivationApp.swift */; };
+		352728A12C1FCCFF00DD859E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352728A02C1FCCFF00DD859E /* Assets.xcassets */; };
+		352728A42C1FCCFF00DD859E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352728A32C1FCCFF00DD859E /* Preview Assets.xcassets */; };
+		3570B18E2C1FCDDD00C7D203 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B18D2C1FCDDD00C7D203 /* MainView.swift */; };
+		3570B1C22C1FD06700C7D203 /* ScreenActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1C12C1FD06700C7D203 /* ScreenActivityReport.swift */; };
+		3570B1C42C1FD06700C7D203 /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1C32C1FD06700C7D203 /* TotalActivityReport.swift */; };
+		3570B1C62C1FD06700C7D203 /* TotalActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1C52C1FD06700C7D203 /* TotalActivityView.swift */; };
+		3570B1CB2C1FD06700C7D203 /* ScreenActivityReport.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 3570B1BF2C1FD06700C7D203 /* ScreenActivityReport.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3570B1D42C1FD09100C7D203 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3570B1982C1FCFB500C7D203 /* DeviceActivity.framework */; };
+		3570B1D72C1FD09100C7D203 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1D62C1FD09100C7D203 /* DeviceActivityMonitorExtension.swift */; };
+		3570B1DC2C1FD09100C7D203 /* ScreenActivityMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3570B1D32C1FD09100C7D203 /* ScreenActivityMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3570B1E12C1FD15700C7D203 /* ExampleComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1E02C1FD15700C7D203 /* ExampleComponentView.swift */; };
+		3570B1E32C1FD18F00C7D203 /* MonitoringApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1E22C1FD18F00C7D203 /* MonitoringApplication.swift */; };
+		3570B1E42C1FD18F00C7D203 /* MonitoringApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1E22C1FD18F00C7D203 /* MonitoringApplication.swift */; };
+		3570B1E52C1FD18F00C7D203 /* MonitoringApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1E22C1FD18F00C7D203 /* MonitoringApplication.swift */; };
+		3570B1E72C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1E62C1FD26C00C7D203 /* DeviceActivityManager.swift */; };
+		3570B1E82C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1E62C1FD26C00C7D203 /* DeviceActivityManager.swift */; };
+		3570B1E92C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1E62C1FD26C00C7D203 /* DeviceActivityManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3570B1C92C1FD06700C7D203 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 352728912C1FCCFE00DD859E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3570B1BE2C1FD06700C7D203;
+			remoteInfo = ScreenActivityReport;
+		};
+		3570B1DA2C1FD09100C7D203 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 352728912C1FCCFE00DD859E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3570B1D22C1FD09100C7D203;
+			remoteInfo = ScreenActivityMonitor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3570B1A52C1FCFB500C7D203 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3570B1DC2C1FD09100C7D203 /* ScreenActivityMonitor.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3570B1BA2C1FCFCA00C7D203 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				3570B1CB2C1FD06700C7D203 /* ScreenActivityReport.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		352728992C1FCCFE00DD859E /* Moo-Tivation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moo-Tivation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3527289C2C1FCCFE00DD859E /* Moo_TivationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moo_TivationApp.swift; sourceTree = "<group>"; };
+		352728A02C1FCCFF00DD859E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		352728A32C1FCCFF00DD859E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3570B18D2C1FCDDD00C7D203 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3570B1912C1FCF9F00C7D203 /* Moo-Tivation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Moo-Tivation.entitlements"; sourceTree = "<group>"; };
+		3570B1982C1FCFB500C7D203 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
+		3570B1BF2C1FD06700C7D203 /* ScreenActivityReport.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = ScreenActivityReport.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3570B1C12C1FD06700C7D203 /* ScreenActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenActivityReport.swift; sourceTree = "<group>"; };
+		3570B1C32C1FD06700C7D203 /* TotalActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityReport.swift; sourceTree = "<group>"; };
+		3570B1C52C1FD06700C7D203 /* TotalActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityView.swift; sourceTree = "<group>"; };
+		3570B1C72C1FD06700C7D203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3570B1C82C1FD06700C7D203 /* ScreenActivityReport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenActivityReport.entitlements; sourceTree = "<group>"; };
+		3570B1D32C1FD09100C7D203 /* ScreenActivityMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenActivityMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3570B1D62C1FD09100C7D203 /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
+		3570B1D82C1FD09100C7D203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3570B1D92C1FD09100C7D203 /* ScreenActivityMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenActivityMonitor.entitlements; sourceTree = "<group>"; };
+		3570B1E02C1FD15700C7D203 /* ExampleComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleComponentView.swift; sourceTree = "<group>"; };
+		3570B1E22C1FD18F00C7D203 /* MonitoringApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringApplication.swift; sourceTree = "<group>"; };
+		3570B1E62C1FD26C00C7D203 /* DeviceActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		352728962C1FCCFE00DD859E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3570B1BC2C1FD06700C7D203 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3570B1D02C1FD09100C7D203 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3570B1D42C1FD09100C7D203 /* DeviceActivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		352728902C1FCCFE00DD859E = {
+			isa = PBXGroup;
+			children = (
+				3527289B2C1FCCFE00DD859E /* Moo-Tivation */,
+				3570B1C02C1FD06700C7D203 /* ScreenActivityReport */,
+				3570B1D52C1FD09100C7D203 /* ScreenActivityMonitor */,
+				3570B1972C1FCFB500C7D203 /* Frameworks */,
+				3527289A2C1FCCFE00DD859E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3527289A2C1FCCFE00DD859E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				352728992C1FCCFE00DD859E /* Moo-Tivation.app */,
+				3570B1BF2C1FD06700C7D203 /* ScreenActivityReport.appex */,
+				3570B1D32C1FD09100C7D203 /* ScreenActivityMonitor.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3527289B2C1FCCFE00DD859E /* Moo-Tivation */ = {
+			isa = PBXGroup;
+			children = (
+				3570B1912C1FCF9F00C7D203 /* Moo-Tivation.entitlements */,
+				3570B1902C1FCE5200C7D203 /* Assets */,
+				3570B18C2C1FCD9F00C7D203 /* Model */,
+				3570B18B2C1FCD8C00C7D203 /* Manager */,
+				3570B18A2C1FCD8600C7D203 /* View */,
+				3527289C2C1FCCFE00DD859E /* Moo_TivationApp.swift */,
+				352728A22C1FCCFF00DD859E /* Preview Content */,
+			);
+			path = "Moo-Tivation";
+			sourceTree = "<group>";
+		};
+		352728A22C1FCCFF00DD859E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				352728A32C1FCCFF00DD859E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3570B18A2C1FCD8600C7D203 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3570B18F2C1FCDFC00C7D203 /* Component */,
+				3570B18D2C1FCDDD00C7D203 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3570B18B2C1FCD8C00C7D203 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				3570B1E62C1FD26C00C7D203 /* DeviceActivityManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		3570B18C2C1FCD9F00C7D203 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3570B1E22C1FD18F00C7D203 /* MonitoringApplication.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3570B18F2C1FCDFC00C7D203 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				3570B1E02C1FD15700C7D203 /* ExampleComponentView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		3570B1902C1FCE5200C7D203 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				352728A02C1FCCFF00DD859E /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		3570B1972C1FCFB500C7D203 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3570B1982C1FCFB500C7D203 /* DeviceActivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3570B1C02C1FD06700C7D203 /* ScreenActivityReport */ = {
+			isa = PBXGroup;
+			children = (
+				3570B1C12C1FD06700C7D203 /* ScreenActivityReport.swift */,
+				3570B1C32C1FD06700C7D203 /* TotalActivityReport.swift */,
+				3570B1C52C1FD06700C7D203 /* TotalActivityView.swift */,
+				3570B1C72C1FD06700C7D203 /* Info.plist */,
+				3570B1C82C1FD06700C7D203 /* ScreenActivityReport.entitlements */,
+			);
+			path = ScreenActivityReport;
+			sourceTree = "<group>";
+		};
+		3570B1D52C1FD09100C7D203 /* ScreenActivityMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				3570B1D62C1FD09100C7D203 /* DeviceActivityMonitorExtension.swift */,
+				3570B1D82C1FD09100C7D203 /* Info.plist */,
+				3570B1D92C1FD09100C7D203 /* ScreenActivityMonitor.entitlements */,
+			);
+			path = ScreenActivityMonitor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		352728982C1FCCFE00DD859E /* Moo-Tivation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 352728A72C1FCCFF00DD859E /* Build configuration list for PBXNativeTarget "Moo-Tivation" */;
+			buildPhases = (
+				352728952C1FCCFE00DD859E /* Sources */,
+				352728962C1FCCFE00DD859E /* Frameworks */,
+				352728972C1FCCFE00DD859E /* Resources */,
+				3570B1A52C1FCFB500C7D203 /* Embed Foundation Extensions */,
+				3570B1BA2C1FCFCA00C7D203 /* Embed ExtensionKit Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3570B1CA2C1FD06700C7D203 /* PBXTargetDependency */,
+				3570B1DB2C1FD09100C7D203 /* PBXTargetDependency */,
+			);
+			name = "Moo-Tivation";
+			productName = "Moo-Tivation";
+			productReference = 352728992C1FCCFE00DD859E /* Moo-Tivation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3570B1BE2C1FD06700C7D203 /* ScreenActivityReport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3570B1CC2C1FD06700C7D203 /* Build configuration list for PBXNativeTarget "ScreenActivityReport" */;
+			buildPhases = (
+				3570B1BB2C1FD06700C7D203 /* Sources */,
+				3570B1BC2C1FD06700C7D203 /* Frameworks */,
+				3570B1BD2C1FD06700C7D203 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenActivityReport;
+			productName = ScreenActivityReport;
+			productReference = 3570B1BF2C1FD06700C7D203 /* ScreenActivityReport.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
+		3570B1D22C1FD09100C7D203 /* ScreenActivityMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3570B1DD2C1FD09100C7D203 /* Build configuration list for PBXNativeTarget "ScreenActivityMonitor" */;
+			buildPhases = (
+				3570B1CF2C1FD09100C7D203 /* Sources */,
+				3570B1D02C1FD09100C7D203 /* Frameworks */,
+				3570B1D12C1FD09100C7D203 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenActivityMonitor;
+			productName = ScreenActivityMonitor;
+			productReference = 3570B1D32C1FD09100C7D203 /* ScreenActivityMonitor.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		352728912C1FCCFE00DD859E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					352728982C1FCCFE00DD859E = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					3570B1BE2C1FD06700C7D203 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					3570B1D22C1FD09100C7D203 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 352728942C1FCCFE00DD859E /* Build configuration list for PBXProject "Moo-Tivation" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 352728902C1FCCFE00DD859E;
+			productRefGroup = 3527289A2C1FCCFE00DD859E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				352728982C1FCCFE00DD859E /* Moo-Tivation */,
+				3570B1BE2C1FD06700C7D203 /* ScreenActivityReport */,
+				3570B1D22C1FD09100C7D203 /* ScreenActivityMonitor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		352728972C1FCCFE00DD859E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				352728A42C1FCCFF00DD859E /* Preview Assets.xcassets in Resources */,
+				352728A12C1FCCFF00DD859E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3570B1BD2C1FD06700C7D203 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3570B1D12C1FD09100C7D203 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		352728952C1FCCFE00DD859E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3570B1E32C1FD18F00C7D203 /* MonitoringApplication.swift in Sources */,
+				3570B1E12C1FD15700C7D203 /* ExampleComponentView.swift in Sources */,
+				3570B1E72C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
+				3570B18E2C1FCDDD00C7D203 /* MainView.swift in Sources */,
+				3527289D2C1FCCFE00DD859E /* Moo_TivationApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3570B1BB2C1FD06700C7D203 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3570B1E42C1FD18F00C7D203 /* MonitoringApplication.swift in Sources */,
+				3570B1C62C1FD06700C7D203 /* TotalActivityView.swift in Sources */,
+				3570B1E82C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
+				3570B1C22C1FD06700C7D203 /* ScreenActivityReport.swift in Sources */,
+				3570B1C42C1FD06700C7D203 /* TotalActivityReport.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3570B1CF2C1FD09100C7D203 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3570B1E92C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
+				3570B1E52C1FD18F00C7D203 /* MonitoringApplication.swift in Sources */,
+				3570B1D72C1FD09100C7D203 /* DeviceActivityMonitorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3570B1CA2C1FD06700C7D203 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3570B1BE2C1FD06700C7D203 /* ScreenActivityReport */;
+			targetProxy = 3570B1C92C1FD06700C7D203 /* PBXContainerItemProxy */;
+		};
+		3570B1DB2C1FD09100C7D203 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3570B1D22C1FD09100C7D203 /* ScreenActivityMonitor */;
+			targetProxy = 3570B1DA2C1FD09100C7D203 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		352728A52C1FCCFF00DD859E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		352728A62C1FCCFF00DD859E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		352728A82C1FCCFF00DD859E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Moo-Tivation/Moo-Tivation.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Moo-Tivation/Preview Content\"";
+				DEVELOPMENT_TEAM = C3P52YR8KJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shin.Moo-Tivation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		352728A92C1FCCFF00DD859E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Moo-Tivation/Moo-Tivation.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Moo-Tivation/Preview Content\"";
+				DEVELOPMENT_TEAM = C3P52YR8KJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shin.Moo-Tivation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3570B1CD2C1FD06700C7D203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ScreenActivityReport/ScreenActivityReport.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C3P52YR8KJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenActivityReport/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenActivityReport;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shin.Moo-Tivation.ScreenActivityReport";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3570B1CE2C1FD06700C7D203 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ScreenActivityReport/ScreenActivityReport.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C3P52YR8KJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenActivityReport/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenActivityReport;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shin.Moo-Tivation.ScreenActivityReport";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3570B1DE2C1FD09100C7D203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ScreenActivityMonitor/ScreenActivityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C3P52YR8KJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenActivityMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenActivityMonitor;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shin.Moo-Tivation.ScreenActivityMonitor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3570B1DF2C1FD09100C7D203 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ScreenActivityMonitor/ScreenActivityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C3P52YR8KJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenActivityMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenActivityMonitor;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shin.Moo-Tivation.ScreenActivityMonitor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		352728942C1FCCFE00DD859E /* Build configuration list for PBXProject "Moo-Tivation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				352728A52C1FCCFF00DD859E /* Debug */,
+				352728A62C1FCCFF00DD859E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		352728A72C1FCCFF00DD859E /* Build configuration list for PBXNativeTarget "Moo-Tivation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				352728A82C1FCCFF00DD859E /* Debug */,
+				352728A92C1FCCFF00DD859E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3570B1CC2C1FD06700C7D203 /* Build configuration list for PBXNativeTarget "ScreenActivityReport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3570B1CD2C1FD06700C7D203 /* Debug */,
+				3570B1CE2C1FD06700C7D203 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3570B1DD2C1FD09100C7D203 /* Build configuration list for PBXNativeTarget "ScreenActivityMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3570B1DE2C1FD09100C7D203 /* Debug */,
+				3570B1DF2C1FD09100C7D203 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 352728912C1FCCFE00DD859E /* Project object */;
+}
