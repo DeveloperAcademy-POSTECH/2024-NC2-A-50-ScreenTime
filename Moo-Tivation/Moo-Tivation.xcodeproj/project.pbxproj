@@ -35,6 +35,8 @@
 		35FE4A132C20488A003B1555 /* MonitoringApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A102C20488A003B1555 /* MonitoringApplication.swift */; };
 		35FE4A142C20488A003B1555 /* MonitoringApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A102C20488A003B1555 /* MonitoringApplication.swift */; };
 		F007611F2C20016F00BAF311 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007611E2C20016F00BAF311 /* Color.swift */; };
+		F0CC6EFC2C202EE900AF233A /* SpoilAppSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC6EFB2C202EE900AF233A /* SpoilAppSettingView.swift */; };
+		F0CC6EFE2C20486100AF233A /* TimeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC6EFD2C20486100AF233A /* TimeSettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,8 @@
 		35FE4A082C204536003B1555 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		35FE4A102C20488A003B1555 /* MonitoringApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringApplication.swift; sourceTree = "<group>"; };
 		F007611E2C20016F00BAF311 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F0CC6EFB2C202EE900AF233A /* SpoilAppSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoilAppSettingView.swift; sourceTree = "<group>"; };
+		F0CC6EFD2C20486100AF233A /* TimeSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,8 @@
 			children = (
 				3570B18F2C1FCDFC00C7D203 /* Component */,
 				3570B18D2C1FCDDD00C7D203 /* MainView.swift */,
+				F0CC6EFB2C202EE900AF233A /* SpoilAppSettingView.swift */,
+				F0CC6EFD2C20486100AF233A /* TimeSettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -447,6 +453,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CC6EFE2C20486100AF233A /* TimeSettingView.swift in Sources */,
+				3570B1E32C1FD18F00C7D203 /* MonitoringApplication.swift in Sources */,
+				3570B1E12C1FD15700C7D203 /* ExampleComponentView.swift in Sources */,
+				3570B1E72C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
+				3570B18E2C1FCDDD00C7D203 /* MainView.swift in Sources */,
+				F0CC6EFC2C202EE900AF233A /* SpoilAppSettingView.swift in Sources */,
 				35FE4A112C20488A003B1555 /* MonitoringApplication.swift in Sources */,
 				3570B1E12C1FD15700C7D203 /* ExampleComponentView.swift in Sources */,
 				3570B1E72C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
