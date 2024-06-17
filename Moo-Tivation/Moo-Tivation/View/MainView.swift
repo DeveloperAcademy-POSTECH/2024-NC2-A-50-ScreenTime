@@ -68,12 +68,16 @@ struct MainView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(.colorTypo15)
                         .foregroundColor(.white)
-                        .frame(width: 353, height: 123)
+                        .padding(.vertical)
+                        .frame(height: 140)
+                    
                     VStack{
                         Text("현재 아낀 시간")
                             .font(.system(size: 17, weight: .regular))
                             .foregroundStyle(AppColor.blueTypo)
+                        
                         Spacer().frame(height: 10)
+                        
                         Text("00일 00시간 00분")
                             .font(.system(size: 32, weight: .bold))
                     }
