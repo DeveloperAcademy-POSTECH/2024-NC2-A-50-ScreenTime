@@ -19,6 +19,7 @@ struct MainView: View {
                         Text(self.segment[index]).tag(index)
                     }
                 }.pickerStyle(SegmentedPickerStyle())
+                    .frame(width: 192)
             }
             Spacer().frame(height: 22)
             HStack{
