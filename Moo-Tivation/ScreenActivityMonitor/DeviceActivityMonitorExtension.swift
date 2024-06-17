@@ -24,7 +24,7 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
     
     override func eventDidReachThreshold(_ event: DeviceActivityEvent.Name, activity: DeviceActivityName) {
         super.eventDidReachThreshold(event, activity: activity)
-        
+        NotifiactionManager.shared.sendNotification(text: "종료 시간 임박!")
         // Handle the event reaching its threshold.
     }
     
