@@ -6,7 +6,16 @@
 //
 
 import Foundation
+import FamilyControls
+import ManagedSettings
 
-struct MonitoringApplication {
+class MonitoringApplication {
+    static let shared = MonitoringApplication()
+    private init() {}
     
+    @Published var newSelection: FamilyActivitySelection = .init()
+    
+    var selectedAppsTokens: Set<ApplicationToken> {
+        newSelection.applicationTokens
+    }
 }
