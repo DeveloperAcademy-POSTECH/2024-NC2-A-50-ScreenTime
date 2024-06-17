@@ -9,7 +9,7 @@ import Foundation
 import FamilyControls
 import ManagedSettings
 
-class MonitoringApplication {
+class MonitoringApplication: ObservableObject {
     static let shared = MonitoringApplication()
     private init() {}
     
