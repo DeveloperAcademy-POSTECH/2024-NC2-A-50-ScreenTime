@@ -77,13 +77,14 @@ struct MainView: View {
                     .foregroundStyle(AppColor.blackTypo50)
                 
                 Spacer()
-            }
+            }.padding(.horizontal, 44)
+                
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(.colorTypo15)
                         .foregroundColor(.white)
-                        .padding(.vertical)
-                        .frame(height: 140)
+                        .frame(height: 123)
+                        .padding(.horizontal, 20)
                     
                     VStack{
                         Text("현재 아낀 시간")
@@ -97,7 +98,7 @@ struct MainView: View {
                     }
                 }
                 Spacer().frame(height: 17)
-            }.padding(.horizontal, 44)
+            }
         }
     }
 }
