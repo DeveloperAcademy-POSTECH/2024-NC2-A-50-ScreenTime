@@ -31,6 +31,7 @@
 		3574C09D2C1FE9DD003D3592 /* ScreenTimeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3574C09C2C1FE9DD003D3592 /* ScreenTimeWidget.swift */; };
 		3574C09F2C1FE9DE003D3592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3574C09E2C1FE9DE003D3592 /* Assets.xcassets */; };
 		3574C0A32C1FE9DE003D3592 /* ScreenTimeWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3574C0942C1FE9DD003D3592 /* ScreenTimeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F007611F2C20016F00BAF311 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007611E2C20016F00BAF311 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		3574C09E2C1FE9DE003D3592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3574C0A02C1FE9DE003D3592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3574C0A72C1FE9EF003D3592 /* ScreenTimeWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenTimeWidgetExtension.entitlements; sourceTree = "<group>"; };
+		F007611E2C20016F00BAF311 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				352728A02C1FCCFF00DD859E /* Assets.xcassets */,
+				F007611E2C20016F00BAF311 /* Color.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				3570B1E72C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
 				3570B18E2C1FCDDD00C7D203 /* MainView.swift in Sources */,
 				3527289D2C1FCCFE00DD859E /* Moo_TivationApp.swift in Sources */,
+				F007611F2C20016F00BAF311 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
