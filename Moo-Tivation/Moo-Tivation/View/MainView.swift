@@ -20,10 +20,13 @@ struct MainView: View {
                     }
                 }.pickerStyle(SegmentedPickerStyle())
                     .frame(width: 192)
+                    
             }
             Spacer().frame(height: 22)
+            
             HStack{
-                Spacer().frame(width: 300)
+                Spacer()
+                
                 Button(action: {
                     
                 }, label: {
@@ -31,25 +34,34 @@ struct MainView: View {
                         .resizable()
                         .frame(width: 25,height: 25)
                 })
+                .padding(.horizontal)
             }
+            
             VStack{
             VStack(alignment: .leading){
                 Text("스포일앱를 사용할 수 있는 시간")
                     .font(.system(size: 17, weight: .medium))
                     .foregroundStyle(AppColor.blueTypo)
+                
                 Spacer().frame(height: 5)
+                
                 Text("1시간 20분")
                     .font(.system(size: 40, weight: .heavy))
                     .foregroundStyle(AppColor.blackTypo100)
+                
                 Spacer().frame(height: 40)
+                
                 VStack(){
                     Image("colbycheese")
                         .resizable()
                         .frame(width: 224, height: 224)
+                    
                     Spacer().frame(height: 29)
+                    
                     Text("사용자가 설정한 문구가 나오는 곳")
                         .font(.system(size: 20, weight: .bold))
                         .foregroundStyle(AppColor.blackTypo100)
+                    
                 } .frame(maxWidth: .infinity, alignment: .center)
                 
                 Spacer().frame(height: 49)
@@ -57,8 +69,10 @@ struct MainView: View {
                 Text("콜비치즈")
                     .font(.system(size: 16, weight: .medium))
                     .foregroundStyle(AppColor.blackTypo70)
+                
                 Spacer().frame(height: 3)
-                Text("프랑스의 노르망디 지방에서 생산되는 부드러운 연질의 치즈이다. 카망베르 마을에서 처음 만들어져 그 이름을 땄다.")
+                
+                Text("프랑스의 노르망디 지방에서 생산되는 부드러운 연질의 \n치즈이다. 카망베르 마을에서 처음 만들어져 그 이름을 땄다.")
                     .font(.system(size: 13, weight: .regular))
                     .foregroundStyle(AppColor.blackTypo50)
                 
