@@ -122,7 +122,7 @@ struct MainView: View {
                     path.append("SpoilAppSettingView")
                 }
             }
-        }
+        }.ignoresSafeArea()
     }
 }
 
