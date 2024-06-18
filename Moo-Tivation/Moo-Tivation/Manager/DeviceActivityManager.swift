@@ -8,6 +8,7 @@
 import Foundation
 import ManagedSettings
 import DeviceActivity
+import FamilyControls
 
 class DeviceActivityManager {
     
@@ -17,12 +18,13 @@ class DeviceActivityManager {
     let model = MonitoringApplication.shared
     let deviceActivityCenter = DeviceActivityCenter()
     
-    func startDeviceActivityMonitoring(hour: Int, minute: Int, completion: @escaping (Result<Void, Error>) -> Void) {
+    func startDeviceActivityMonitoring(appTokens: FamilyActivitySelection, hour: Int, minute: Int, completion: @escaping (Result<Void, Error>) -> Void) {
         // 선택한 앱 토큰 가져오기
-        let selectedAppTokens = model.newSelection.applicationTokens
+        let selectedAppTokens = appTokens.applicationTokens
         
         // 임계값
-        let threshold = DateComponents(hour: hour, minute: minute)
+        // let threshold = DateComponents(hour: hour, minute: minute)
+        let threshold = DateComponents(second: 10)
         
         // 모니터 DeviceActivitySchedule 설정 - 매일 24시간
         let schedule = DeviceActivitySchedule(

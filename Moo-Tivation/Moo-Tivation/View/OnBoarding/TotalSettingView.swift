@@ -10,6 +10,7 @@ import SwiftUI
 struct TotalSettingView: View {
     @Binding var path: [String]
     @Binding var userSettings: UserSettings
+    @AppStorage("noti") private var notificationText: String = "hello"
     
     @Environment(\.dismiss) private var dismiss
     
@@ -91,6 +92,17 @@ struct TotalSettingView: View {
                         
                         userSettings.onboardingCompleted = true
                         UserSettingsManager.shared.saveSettings(userSettings)
+                        
+                        let appTokens = UserSettingsManager.shared.loadAppTokkens()
+                        notificationText = UserSettingsManager.shared.loadNotificationText()
+                        DeviceActivityManager.shared.startDeviceActivityMonitoring(appTokens: appTokens, hour: 1, minute: 1) { result in
+                            switch result {
+                            case .success():
+                                print("성공")
+                            case .failure(let error):
+                                print("실패")
+                            }
+                        }
                         
                         path.removeLast(path.count)
                     }, label: {
