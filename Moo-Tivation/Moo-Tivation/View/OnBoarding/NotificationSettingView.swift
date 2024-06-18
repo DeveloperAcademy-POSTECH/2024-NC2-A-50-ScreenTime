@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NotificationSettingView: View {
     @Binding var path: [String]
+    @Binding var userSettings: UserSettings
     
     @State var notificationText: String = "생각한대로 말하는대로 삶은 흘러간다."
     var characterLimit: Int = 25
@@ -58,6 +59,7 @@ struct NotificationSettingView: View {
                     
                     HStack {
                         Button(action: {
+                            userSettings.notificationText = notificationText
                             path.append("TotalSettingView")
                         }, label: {
                             ZStack{

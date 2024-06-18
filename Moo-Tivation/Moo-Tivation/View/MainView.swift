@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     let segment = ["우유 상태", "완료 여부"]
     
+    //@State private var userSettings = UserSettings()
     @State var path: [String] = []
     @State private var segmentpick = 0
     
@@ -104,13 +105,13 @@ struct MainView: View {
             .navigationDestination(for: String.self) { value in
                 switch value {
                 case "SpoilAppSettingView":
-                    SpoilAppSettingView(path: $path)
+                    SpoilAppSettingView(path: $path, userSettings: $userSettings)
                 case "TimeSettingView":
-                    TimeSettingView(path: $path)
+                    TimeSettingView(path: $path, userSettings: $userSettings)
                 case "NotificationSettingView":
-                    NotificationSettingView(path: $path)
+                    NotificationSettingView(path: $path, userSettings: $userSettings)
                 case "TotalSettingView":
-                    TotalSettingView(path: $path)
+                    TotalSettingView(path: $path, userSettings: $userSettings)
                 default:
                     EmptyView()
                 }
