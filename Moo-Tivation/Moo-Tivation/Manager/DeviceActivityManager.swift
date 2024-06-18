@@ -15,7 +15,6 @@ class DeviceActivityManager {
     static let shared = DeviceActivityManager()
     private init() {}
     
-    let model = MonitoringApplication.shared
     let deviceActivityCenter = DeviceActivityCenter()
     
     func startDeviceActivityMonitoring(appTokens: FamilyActivitySelection, hour: Int, minute: Int, completion: @escaping (Result<Void, Error>) -> Void) {
