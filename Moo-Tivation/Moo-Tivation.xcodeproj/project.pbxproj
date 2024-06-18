@@ -35,6 +35,8 @@
 		35FE4A132C20488A003B1555 /* MonitoringApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A102C20488A003B1555 /* MonitoringApplication.swift */; };
 		35FE4A142C20488A003B1555 /* MonitoringApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A102C20488A003B1555 /* MonitoringApplication.swift */; };
 		35FE4A192C206B3E003B1555 /* NotificationSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A182C206B3E003B1555 /* NotificationSettingView.swift */; };
+		35FE4A1B2C211E5B003B1555 /* TotalSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A1A2C211E5B003B1555 /* TotalSettingView.swift */; };
+		35FE4A1D2C21206D003B1555 /* LittleTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A1C2C21206D003B1555 /* LittleTitleView.swift */; };
 		F007611F2C20016F00BAF311 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007611E2C20016F00BAF311 /* Color.swift */; };
 		F0CC6EFC2C202EE900AF233A /* SpoilAppSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC6EFB2C202EE900AF233A /* SpoilAppSettingView.swift */; };
 		F0CC6EFE2C20486100AF233A /* TimeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC6EFD2C20486100AF233A /* TimeSettingView.swift */; };
@@ -121,6 +123,8 @@
 		35FE4A082C204536003B1555 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		35FE4A102C20488A003B1555 /* MonitoringApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringApplication.swift; sourceTree = "<group>"; };
 		35FE4A182C206B3E003B1555 /* NotificationSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingView.swift; sourceTree = "<group>"; };
+		35FE4A1A2C211E5B003B1555 /* TotalSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalSettingView.swift; sourceTree = "<group>"; };
+		35FE4A1C2C21206D003B1555 /* LittleTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleTitleView.swift; sourceTree = "<group>"; };
 		F007611E2C20016F00BAF311 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F0CC6EFB2C202EE900AF233A /* SpoilAppSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoilAppSettingView.swift; sourceTree = "<group>"; };
 		F0CC6EFD2C20486100AF233A /* TimeSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingView.swift; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				3570B1E02C1FD15700C7D203 /* OnBoardingHeaderView.swift */,
+				35FE4A1C2C21206D003B1555 /* LittleTitleView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 				F0CC6EFB2C202EE900AF233A /* SpoilAppSettingView.swift */,
 				F0CC6EFD2C20486100AF233A /* TimeSettingView.swift */,
 				35FE4A182C206B3E003B1555 /* NotificationSettingView.swift */,
+				35FE4A1A2C211E5B003B1555 /* TotalSettingView.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -468,6 +474,7 @@
 				3570B1E12C1FD15700C7D203 /* OnBoardingHeaderView.swift in Sources */,
 				3570B1E72C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
 				35FE4A192C206B3E003B1555 /* NotificationSettingView.swift in Sources */,
+				35FE4A1B2C211E5B003B1555 /* TotalSettingView.swift in Sources */,
 				3570B18E2C1FCDDD00C7D203 /* MainView.swift in Sources */,
 				F0CC6EFC2C202EE900AF233A /* SpoilAppSettingView.swift in Sources */,
 				35FE4A112C20488A003B1555 /* MonitoringApplication.swift in Sources */,
@@ -476,6 +483,7 @@
 				3570B18E2C1FCDDD00C7D203 /* MainView.swift in Sources */,
 				35FE4A092C204536003B1555 /* NotificationManager.swift in Sources */,
 				3527289D2C1FCCFE00DD859E /* Moo_TivationApp.swift in Sources */,
+				35FE4A1D2C21206D003B1555 /* LittleTitleView.swift in Sources */,
 				F007611F2C20016F00BAF311 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -671,6 +679,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -702,6 +711,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

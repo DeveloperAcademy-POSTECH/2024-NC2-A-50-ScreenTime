@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct TimeSettingView: View {
-    @State var hours: Int = 2
-    @State var minutes: Int = 30
-    @Environment(\.presentationMode) var presentationMode
+    @Binding var path: [String]
+    
+    @State private var hours: Int = 2
+    @State private var minutes: Int = 30
     
     var body: some View {
         ZStack {
@@ -60,9 +61,9 @@ struct TimeSettingView: View {
                 Spacer()
                 
                 HStack {
-                    NavigationLink {
-                        NotificationSettingView()
-                    } label: {
+                    Button(action: {
+                        path.append("NotificationSettingView")
+                    }, label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(height: 56)
@@ -72,13 +73,13 @@ struct TimeSettingView: View {
                                 .font(.system(size: 16, weight: .semibold))
                                 .foregroundColor(.white)
                         }
-                    }
+                    })
                 }.padding(.horizontal, 12)
             }
         }.navigationBarBackButtonHidden(true)
     }
 }
 
-#Preview {
-    TimeSettingView()
-}
+//#Preview {
+//    TimeSettingView()
+//}

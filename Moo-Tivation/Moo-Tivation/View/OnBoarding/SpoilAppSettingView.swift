@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct SpoilAppSettingView: View {
-    @Environment(\.presentationMode) var presentationMode
+    
+    @Binding var path: [String]
     
     var body: some View {
         ZStack {
@@ -59,10 +60,11 @@ struct SpoilAppSettingView: View {
                 
                 Spacer()
                 
+
                 HStack {
-                    NavigationLink {
-                        TimeSettingView()
-                    } label: {
+                    Button(action: {
+                        path.append("TimeSettingView")
+                    }, label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(height: 56)
@@ -72,13 +74,14 @@ struct SpoilAppSettingView: View {
                                 .font(.system(size: 16, weight: .semibold))
                                 .foregroundColor(.white)
                         }
-                    }
+                    })
                 }.padding(.horizontal, 12)
             }
-        }.navigationBarBackButtonHidden(true)
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
-#Preview {
-    SpoilAppSettingView()
-}
+//#Preview {
+//    SpoilAppSettingView(path: )
+//}

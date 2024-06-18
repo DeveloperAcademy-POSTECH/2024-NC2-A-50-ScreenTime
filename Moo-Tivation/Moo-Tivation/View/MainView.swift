@@ -9,10 +9,12 @@ import SwiftUI
 
 struct MainView: View {
     let segment = ["우유 상태", "완료 여부"]
+    
+    @State var path: [String] = []
     @State private var segmentpick = 0
     
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $path) {
             VStack {
                 VStack {
                     Picker(selection: $segmentpick, label: Text("menu")) {
@@ -27,16 +29,14 @@ struct MainView: View {
                 
                 HStack {
                     Spacer()
-                    NavigationLink(destination: {
-                        SpoilAppSettingView()
+                    Button(action: {
+                        path.append("SpoilAppSettingView")
                     }, label: {
                         Image(systemName: "gearshape.fill")
                             .resizable()
                             .frame(width: 25,height: 25)
                     })
-                    
-                    .padding(.horizontal)
-                }
+                }.padding(.trailing, 25)
                 
                 VStack {
                     VStack(alignment: .leading) {
@@ -99,6 +99,20 @@ struct MainView: View {
                         }
                     }
                     Spacer().frame(height: 17)
+                }
+            }
+            .navigationDestination(for: String.self) { value in
+                switch value {
+                case "SpoilAppSettingView":
+                    SpoilAppSettingView(path: $path)
+                case "TimeSettingView":
+                    TimeSettingView(path: $path)
+                case "NotificationSettingView":
+                    NotificationSettingView(path: $path)
+                case "TotalSettingView":
+                    TotalSettingView(path: $path)
+                default:
+                    EmptyView()
                 }
             }
         }

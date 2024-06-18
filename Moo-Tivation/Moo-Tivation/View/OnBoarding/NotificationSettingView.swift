@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct NotificationSettingView: View {
-    @Environment(\.presentationMode) var presentationMode
+    @Binding var path: [String]
     
-    @State private var notificationText: String = "생각한대로 말하는대로 삶은 흘러간다."
-    private var characterLimit: Int = 25
+    @State var notificationText: String = "생각한대로 말하는대로 삶은 흘러간다."
+    var characterLimit: Int = 25
     
     var body: some View {
         ZStack {
@@ -57,9 +57,9 @@ struct NotificationSettingView: View {
                     Spacer()
                     
                     HStack {
-                        NavigationLink {
-                            //TimeSettingView()
-                        } label: {
+                        Button(action: {
+                            path.append("TotalSettingView")
+                        }, label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 10)
                                     .frame(height: 56)
@@ -69,15 +69,16 @@ struct NotificationSettingView: View {
                                     .font(.system(size: 16, weight: .semibold))
                                     .foregroundColor(.white)
                             }
-                        }
+                        })
                     }
                 }.padding(.horizontal, 12)
-                
-            }.ignoresSafeArea(.keyboard)
+            }
+            .ignoresSafeArea(.keyboard)
         }.navigationBarBackButtonHidden(true)
     }
 }
 
+// MARK: - 잠금화면 프리뷰
 fileprivate struct LockScreenPreview: View {
     
     private var notificationText: String
@@ -148,6 +149,6 @@ fileprivate struct LockScreenPreview: View {
 }
 
 
-#Preview {
-    NotificationSettingView()
-}
+//#Preview {
+//    NotificationSettingView()
+//}
