@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     let segment = ["우유 상태", "완료 여부"]
     
-    //@State private var userSettings = UserSettings()
+    @State private var userSettings = UserSettings()
     @State var path: [String] = []
     @State private var segmentpick = 0
     
@@ -114,6 +114,12 @@ struct MainView: View {
                     TotalSettingView(path: $path, userSettings: $userSettings)
                 default:
                     EmptyView()
+                }
+            }
+            .onAppear() {
+                userSettings = UserSettingsManager.shared.loadSettings()
+                if !userSettings.onboardingCompleted {
+                    path.append("SpoilAppSettingView")
                 }
             }
         }

@@ -88,6 +88,10 @@ struct TotalSettingView: View {
                 HStack {
                     
                     Button(action: {
+                        
+                        userSettings.onboardingCompleted = true
+                        UserSettingsManager.shared.saveSettings(userSettings)
+                        
                         path.removeLast(path.count)
                     }, label: {
                         ZStack{
