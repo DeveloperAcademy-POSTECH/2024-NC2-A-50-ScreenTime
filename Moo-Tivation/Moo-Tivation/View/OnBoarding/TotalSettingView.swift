@@ -10,7 +10,6 @@ import SwiftUI
 struct TotalSettingView: View {
     @Binding var path: [String]
     @Binding var userSettings: UserSettings
-    @AppStorage("noti") private var notificationText: String = "hello"
     
     @Environment(\.dismiss) private var dismiss
     
@@ -94,7 +93,7 @@ struct TotalSettingView: View {
                         UserSettingsManager.shared.saveSettings(userSettings)
                         
                         let appTokens = UserSettingsManager.shared.loadAppTokkens()
-                        notificationText = UserSettingsManager.shared.loadNotificationText()
+                        let notificationText = UserSettingsManager.shared.loadNotificationText()
                         DeviceActivityManager.shared.startDeviceActivityMonitoring(appTokens: appTokens, hour: 1, minute: 1) { result in
                             switch result {
                             case .success():

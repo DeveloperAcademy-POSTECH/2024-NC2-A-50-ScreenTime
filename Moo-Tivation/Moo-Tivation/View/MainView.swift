@@ -42,7 +42,7 @@ struct MainView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        path.append("SpoilAppSettingView")
+                        path.append("SettingView")
                     }, label: {
                         Image(systemName: "gearshape.fill")
                             .resizable()
@@ -127,6 +127,8 @@ struct MainView: View {
             }
             .navigationDestination(for: String.self) { value in
                 switch value {
+                case "SettingView":
+                    SettingView(path: $path, userSettings: $userSettings)
                 case "SpoilAppSettingView":
                     SpoilAppSettingView(path: $path, userSettings: $userSettings)
                 case "TimeSettingView":

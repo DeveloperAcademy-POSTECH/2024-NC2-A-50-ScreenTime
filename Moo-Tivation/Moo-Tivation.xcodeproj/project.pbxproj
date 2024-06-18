@@ -11,6 +11,7 @@
 		350E96BD2C21E29F0010A5D2 /* TotalActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1C52C1FD06700C7D203 /* TotalActivityView.swift */; };
 		350E96BE2C21EDCE0010A5D2 /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A242C217C9D003B1555 /* UserSettingsManager.swift */; };
 		350E96BF2C21EE220010A5D2 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A282C217CD3003B1555 /* UserSettings.swift */; };
+		350E96C22C2202520010A5D2 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350E96C12C2202520010A5D2 /* SettingView.swift */; };
 		3527289D2C1FCCFE00DD859E /* Moo_TivationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3527289C2C1FCCFE00DD859E /* Moo_TivationApp.swift */; };
 		352728A12C1FCCFF00DD859E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352728A02C1FCCFF00DD859E /* Assets.xcassets */; };
 		352728A42C1FCCFF00DD859E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352728A32C1FCCFF00DD859E /* Preview Assets.xcassets */; };
@@ -100,6 +101,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		350E96C12C2202520010A5D2 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		352728992C1FCCFE00DD859E /* Moo-Tivation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moo-Tivation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3527289C2C1FCCFE00DD859E /* Moo_TivationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moo_TivationApp.swift; sourceTree = "<group>"; };
 		352728A02C1FCCFF00DD859E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				3570B18F2C1FCDFC00C7D203 /* Component */,
 				3570B18D2C1FCDDD00C7D203 /* MainView.swift */,
 				3554DAB42C21E1FE00ADFD76 /* MonitoringView.swift */,
+				350E96C12C2202520010A5D2 /* SettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0CC6EFE2C20486100AF233A /* TimeSettingView.swift in Sources */,
+				350E96C22C2202520010A5D2 /* SettingView.swift in Sources */,
 				3570B1E12C1FD15700C7D203 /* OnBoardingHeaderView.swift in Sources */,
 				3570B1E72C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
 				35FE4A192C206B3E003B1555 /* NotificationSettingView.swift in Sources */,
