@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		350E96BC2C21E27A0010A5D2 /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1C32C1FD06700C7D203 /* TotalActivityReport.swift */; };
 		350E96BD2C21E29F0010A5D2 /* TotalActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1C52C1FD06700C7D203 /* TotalActivityView.swift */; };
+		350E96BE2C21EDCE0010A5D2 /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A242C217C9D003B1555 /* UserSettingsManager.swift */; };
+		350E96BF2C21EE220010A5D2 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A282C217CD3003B1555 /* UserSettings.swift */; };
 		3527289D2C1FCCFE00DD859E /* Moo_TivationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3527289C2C1FCCFE00DD859E /* Moo_TivationApp.swift */; };
 		352728A12C1FCCFF00DD859E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352728A02C1FCCFF00DD859E /* Assets.xcassets */; };
 		352728A42C1FCCFF00DD859E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352728A32C1FCCFF00DD859E /* Preview Assets.xcassets */; };
@@ -506,8 +508,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3570B1C62C1FD06700C7D203 /* TotalActivityView.swift in Sources */,
+				350E96BF2C21EE220010A5D2 /* UserSettings.swift in Sources */,
 				3570B1E82C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
 				3570B1C22C1FD06700C7D203 /* ScreenActivityReport.swift in Sources */,
+				350E96BE2C21EDCE0010A5D2 /* UserSettingsManager.swift in Sources */,
 				3570B1C42C1FD06700C7D203 /* TotalActivityReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

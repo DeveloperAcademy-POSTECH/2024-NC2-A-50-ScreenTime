@@ -48,4 +48,11 @@ class UserSettingsManager {
     func loadNotificationText() -> String {
         return loadSettings().notificationText
     }
+    
+    func loadHoursAndMinutes() -> TimeInterval {
+        let hours = loadSettings().thresholdHour
+        let minutes = loadSettings().thresholdMinutes
+        let totalSeconds = (hours * 3600) + (minutes * 60)
+        return TimeInterval(totalSeconds)
+    }
 }

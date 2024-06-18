@@ -18,6 +18,7 @@ extension DeviceActivityReport.Context {
 
 // MARK: - Device Activity Report의 내용을 어떻게 구성할 지 설정
 struct TotalActivityReport: DeviceActivityReportScene {
+    let totalInterval = UserSettingsManager.shared.loadHoursAndMinutes()
     // Define which context your scene will represent.
     /// 보여줄 리포트에 대한 컨텍스트를 정의해줍니다.
     let context: DeviceActivityReport.Context = .totalActivity
@@ -31,7 +32,7 @@ struct TotalActivityReport: DeviceActivityReportScene {
         representing data: DeviceActivityResults<DeviceActivityData>) async -> ActivityReport {
         // Reformat the data into a configuration that can be used to create
         // the report's view.
-        var totalActivityDuration: Double = 0 /// 총 스크린 타임 시간
+        var totalActivityDuration: Double = totalInterval /// 총 스크린 타임 시간
         var list: [AppDeviceActivity] = [] /// 사용 앱 리스트
         
         /// DeviceActivityResults 데이터에서 화면에 보여주기 위해 필요한 내용을 추출해줍니다.
@@ -45,7 +46,8 @@ struct TotalActivityReport: DeviceActivityReportScene {
                         let appName = (applicationActivity.application.localizedDisplayName ?? "nil") /// 앱 이름
                         let bundle = (applicationActivity.application.bundleIdentifier ?? "nil") /// 앱 번들id
                         let duration = applicationActivity.totalActivityDuration /// 앱의 total activity 기간
-                        totalActivityDuration += duration
+                        totalActivityDuration -= duration
+                        //totalActivityDuration += duration
                         let numberOfPickups = applicationActivity.numberOfPickups /// 앱에 대해 직접적인 pickup 횟수
                         let token = applicationActivity.application.token /// 앱의 토큰
                         let appActivity = AppDeviceActivity(
@@ -87,6 +89,6 @@ extension TimeInterval {
         let time = NSInteger(self)
         let minutes = (time / 60) % 60
         let hours = (time / 3600)
-        return String(format: "%0.2d:%0.2d", hours,minutes)
+        return String(format: "%d시간 %d분", hours,minutes)
     }
 }

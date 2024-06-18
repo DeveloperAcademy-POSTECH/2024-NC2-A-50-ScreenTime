@@ -6,9 +6,20 @@
 //
 
 import SwiftUI
+import DeviceActivity
 
 struct MainView: View {
     let segment = ["우유 상태", "완료 여부"]
+    
+    @State private var context: DeviceActivityReport.Context = .totalActivity
+    @State private var filter = DeviceActivityFilter(
+        segment: .daily(
+            during: Calendar.current.dateInterval(
+                of: .day,
+                for: .now
+            ) ?? DateInterval()
+        )
+    )
     
     @State private var userSettings = UserSettings()
     @State var path: [String] = []
@@ -47,10 +58,22 @@ struct MainView: View {
                         
                         Spacer().frame(height: 5)
                         
-                        Text("1시간 20분")
-                            .font(.system(size: 40, weight: .heavy))
-                            .foregroundStyle(AppColor.blackTypo100)
-                        
+                        DeviceActivityReport(context, filter: filter)
+                            .onAppear {
+                                filter = DeviceActivityFilter(
+                                    segment: .daily(
+                                        during: Calendar.current.dateInterval(
+                                            of: .day, for: .now
+                                        ) ?? DateInterval()
+                                    ),
+                                    users: .all,
+                                    devices: .init([.iPhone]),
+                                    applications: UserSettingsManager.shared.loadAppTokkens().applicationTokens,
+                                    categories: UserSettingsManager.shared.loadAppTokkens().categoryTokens
+                                )
+                            }
+                            .frame(height: 40)
+
                         Spacer().frame(height: 40)
                         
                         VStack {

@@ -13,16 +13,16 @@ import DeviceActivity
 struct Moo_TivationApp: App {
     var body: some Scene {
         WindowGroup {
-//            MainView()
-//                .onAppear() {
-//                    reqNotificationPermission()
-//                    reqScreenTimePermission()
-//                }
-            MonitoringView()
+            MainView()
                 .onAppear() {
                     reqNotificationPermission()
                     reqScreenTimePermission()
                 }
+//            MonitoringView()
+//                .onAppear() {
+//                    reqNotificationPermission()
+//                    reqScreenTimePermission()
+//                }
         }
     }
 }
