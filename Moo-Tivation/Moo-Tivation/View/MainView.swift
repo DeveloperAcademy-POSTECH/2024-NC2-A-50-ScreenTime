@@ -83,7 +83,7 @@ struct MainView: View {
                             
                             Spacer().frame(height: 29)
                             
-                            Text("사용자가 설정한 문구가 나오는 곳")
+                            Text(userSettings.notificationText)
                                 .font(.system(size: 20, weight: .bold))
                                 .foregroundStyle(AppColor.blackTypo100)
                             
