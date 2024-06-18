@@ -18,7 +18,7 @@
 		3570B1D42C1FD09100C7D203 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3570B1982C1FCFB500C7D203 /* DeviceActivity.framework */; };
 		3570B1D72C1FD09100C7D203 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1D62C1FD09100C7D203 /* DeviceActivityMonitorExtension.swift */; };
 		3570B1DC2C1FD09100C7D203 /* ScreenActivityMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3570B1D32C1FD09100C7D203 /* ScreenActivityMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3570B1E12C1FD15700C7D203 /* ExampleComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1E02C1FD15700C7D203 /* ExampleComponentView.swift */; };
+		3570B1E12C1FD15700C7D203 /* OnBoardingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1E02C1FD15700C7D203 /* OnBoardingHeaderView.swift */; };
 		3570B1E72C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1E62C1FD26C00C7D203 /* DeviceActivityManager.swift */; };
 		3570B1E82C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1E62C1FD26C00C7D203 /* DeviceActivityManager.swift */; };
 		3570B1E92C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1E62C1FD26C00C7D203 /* DeviceActivityManager.swift */; };
@@ -34,6 +34,7 @@
 		35FE4A122C20488A003B1555 /* MonitoringApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A102C20488A003B1555 /* MonitoringApplication.swift */; };
 		35FE4A132C20488A003B1555 /* MonitoringApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A102C20488A003B1555 /* MonitoringApplication.swift */; };
 		35FE4A142C20488A003B1555 /* MonitoringApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A102C20488A003B1555 /* MonitoringApplication.swift */; };
+		35FE4A192C206B3E003B1555 /* NotificationSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A182C206B3E003B1555 /* NotificationSettingView.swift */; };
 		F007611F2C20016F00BAF311 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007611E2C20016F00BAF311 /* Color.swift */; };
 		F0CC6EFC2C202EE900AF233A /* SpoilAppSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC6EFB2C202EE900AF233A /* SpoilAppSettingView.swift */; };
 		F0CC6EFE2C20486100AF233A /* TimeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC6EFD2C20486100AF233A /* TimeSettingView.swift */; };
@@ -107,7 +108,7 @@
 		3570B1D62C1FD09100C7D203 /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
 		3570B1D82C1FD09100C7D203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3570B1D92C1FD09100C7D203 /* ScreenActivityMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenActivityMonitor.entitlements; sourceTree = "<group>"; };
-		3570B1E02C1FD15700C7D203 /* ExampleComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleComponentView.swift; sourceTree = "<group>"; };
+		3570B1E02C1FD15700C7D203 /* OnBoardingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingHeaderView.swift; sourceTree = "<group>"; };
 		3570B1E62C1FD26C00C7D203 /* DeviceActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityManager.swift; sourceTree = "<group>"; };
 		3574C0942C1FE9DD003D3592 /* ScreenTimeWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenTimeWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3574C0952C1FE9DD003D3592 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -119,6 +120,7 @@
 		3574C0A72C1FE9EF003D3592 /* ScreenTimeWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenTimeWidgetExtension.entitlements; sourceTree = "<group>"; };
 		35FE4A082C204536003B1555 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		35FE4A102C20488A003B1555 /* MonitoringApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringApplication.swift; sourceTree = "<group>"; };
+		35FE4A182C206B3E003B1555 /* NotificationSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingView.swift; sourceTree = "<group>"; };
 		F007611E2C20016F00BAF311 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F0CC6EFB2C202EE900AF233A /* SpoilAppSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoilAppSettingView.swift; sourceTree = "<group>"; };
 		F0CC6EFD2C20486100AF233A /* TimeSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingView.swift; sourceTree = "<group>"; };
@@ -208,10 +210,9 @@
 		3570B18A2C1FCD8600C7D203 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				35FE4A172C205B83003B1555 /* OnBoarding */,
 				3570B18F2C1FCDFC00C7D203 /* Component */,
 				3570B18D2C1FCDDD00C7D203 /* MainView.swift */,
-				F0CC6EFB2C202EE900AF233A /* SpoilAppSettingView.swift */,
-				F0CC6EFD2C20486100AF233A /* TimeSettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,7 +237,7 @@
 		3570B18F2C1FCDFC00C7D203 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				3570B1E02C1FD15700C7D203 /* ExampleComponentView.swift */,
+				3570B1E02C1FD15700C7D203 /* OnBoardingHeaderView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -291,6 +292,16 @@
 				3574C0A02C1FE9DE003D3592 /* Info.plist */,
 			);
 			path = ScreenTimeWidget;
+			sourceTree = "<group>";
+		};
+		35FE4A172C205B83003B1555 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				F0CC6EFB2C202EE900AF233A /* SpoilAppSettingView.swift */,
+				F0CC6EFD2C20486100AF233A /* TimeSettingView.swift */,
+				35FE4A182C206B3E003B1555 /* NotificationSettingView.swift */,
+			);
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,13 +465,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0CC6EFE2C20486100AF233A /* TimeSettingView.swift in Sources */,
-				3570B1E32C1FD18F00C7D203 /* MonitoringApplication.swift in Sources */,
-				3570B1E12C1FD15700C7D203 /* ExampleComponentView.swift in Sources */,
+				3570B1E12C1FD15700C7D203 /* OnBoardingHeaderView.swift in Sources */,
 				3570B1E72C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
+				35FE4A192C206B3E003B1555 /* NotificationSettingView.swift in Sources */,
 				3570B18E2C1FCDDD00C7D203 /* MainView.swift in Sources */,
 				F0CC6EFC2C202EE900AF233A /* SpoilAppSettingView.swift in Sources */,
 				35FE4A112C20488A003B1555 /* MonitoringApplication.swift in Sources */,
-				3570B1E12C1FD15700C7D203 /* ExampleComponentView.swift in Sources */,
+				3570B1E12C1FD15700C7D203 /* OnBoardingHeaderView.swift in Sources */,
 				3570B1E72C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
 				3570B18E2C1FCDDD00C7D203 /* MainView.swift in Sources */,
 				35FE4A092C204536003B1555 /* NotificationManager.swift in Sources */,
