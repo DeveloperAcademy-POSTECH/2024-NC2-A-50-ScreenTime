@@ -112,13 +112,13 @@ struct MainView: View {
                             .padding(.horizontal, 20)
                         
                         VStack {
-                            Text("현재 아낀 시간")
+                            Text("내가 설정한 시간")
                                 .font(.system(size: 17, weight: .regular))
                                 .foregroundStyle(AppColor.blueTypo)
                             
                             Spacer().frame(height: 10)
                             
-                            Text("00일 00시간 00분")
+                            Text("\(userSettings.thresholdHour)시간 \(userSettings.thresholdMinutes)분")
                                 .font(.system(size: 32, weight: .bold))
                         }
                     }

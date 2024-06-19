@@ -93,7 +93,7 @@ struct TotalSettingView: View {
                         UserSettingsManager.shared.saveSettings(userSettings)
                         
                         let appTokens = UserSettingsManager.shared.loadAppTokkens()
-                        let notificationText = UserSettingsManager.shared.loadNotificationText()
+                        
                         DeviceActivityManager.shared.startDeviceActivityMonitoring(appTokens: appTokens, hour: 1, minute: 1) { result in
                             switch result {
                             case .success():
