@@ -84,11 +84,17 @@ struct AppDeviceActivity: Identifiable {
 }
 
 extension TimeInterval {
-    /// TimeInterval 타입 값을 00:00 형식의 String으로 변환해주는 메서드
+    /// TimeInterval 타입 값을 0시간 0분 형식의 String으로 변환해주는 메서드
     func toString() -> String {
         let time = NSInteger(self)
-        let minutes = (time / 60) % 60
-        let hours = (time / 3600)
-        return String(format: "%d시간 %d분", hours,minutes)
+        let isNegative = time < 0
+        let absoluteTime = abs(time)
+        let minutes = (absoluteTime / 60) % 60
+        let hours = (absoluteTime / 3600)
+        
+        // 음수일시에는 맨앞에 - 하나만 붙여준다.
+        let sign = isNegative ? "-" : ""
+        
+        return String(format: "%@%d시간 %d분", sign, hours, minutes)
     }
 }
