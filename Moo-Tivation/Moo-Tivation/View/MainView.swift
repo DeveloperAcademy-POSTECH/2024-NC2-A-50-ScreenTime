@@ -151,8 +151,10 @@ struct MainView: View {
             }
             .onChange(of: path) { _, newPath in
                 if newPath.isEmpty {
-                    reloadID = UUID()
-                    print("redraw")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        reloadID = UUID()
+                        print("redraw")
+                    }
                 }
             }
         }
