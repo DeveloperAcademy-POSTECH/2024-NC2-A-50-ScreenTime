@@ -14,8 +14,15 @@ struct TotalActivityView: View {
     
     var body: some View {
         HStack {
-            Text(activityReport.totalDuration.toString())
-                .font(.system(size: 40, weight: .heavy))
+            if activityReport.totalDuration < 0 {
+                Text(activityReport.totalDuration.toString())
+                    .font(.system(size: 40, weight: .heavy))
+                    .foregroundStyle(.red)
+            } else {
+                Text(activityReport.totalDuration.toString())
+                    .font(.system(size: 40, weight: .heavy))
+            }
+            
             Spacer()
         }
     }

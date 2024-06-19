@@ -88,6 +88,7 @@ struct TotalSettingView: View {
                 HStack {
                     
                     Button(action: {
+                        DeviceActivityManager.shared.handleStopDeviceActivityMonitoring()
                         
                         userSettings.onboardingCompleted = true
                         UserSettingsManager.shared.saveSettings(userSettings)
@@ -99,7 +100,7 @@ struct TotalSettingView: View {
                             case .success():
                                 print("성공")
                             case .failure(let error):
-                                print("실패")
+                                print(error.localizedDescription)
                             }
                         }
                         
