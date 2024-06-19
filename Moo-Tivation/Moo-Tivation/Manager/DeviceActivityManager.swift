@@ -17,6 +17,23 @@ class DeviceActivityManager {
     
     let deviceActivityCenter = DeviceActivityCenter()
     
+    //MARK: 스크린타임 권한 요청
+    func reqScreenTimePermission() {
+        let center = AuthorizationCenter.shared
+        
+        if center.authorizationStatus == .approved {
+            print("ScreenTime Permission approved")
+        } else {
+            Task {
+                do {
+                    try await center.requestAuthorization(for: .individual)
+                } catch {
+                    print("Failed to enroll Aniyah with error: \(error)")
+                }
+            }
+        }
+    }
+    
     func startDeviceActivityMonitoring(appTokens: FamilyActivitySelection, hour: Int, minute: Int, completion: @escaping (Result<Void, Error>) -> Void) {
         // 선택한 앱 토큰 가져오기
         let selectedAppTokens = appTokens.applicationTokens

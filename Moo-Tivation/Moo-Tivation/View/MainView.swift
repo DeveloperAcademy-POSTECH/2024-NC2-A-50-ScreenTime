@@ -149,6 +149,8 @@ struct MainView: View {
                 switch value {
                 case "SettingView":
                     SettingView(path: $path, userSettings: $userSettings)
+                case "OnBoardingFirstView":
+                    OnBoardingFirstView(path: $path)
                 case "SpoilAppSettingView":
                     SpoilAppSettingView(path: $path, userSettings: $userSettings)
                 case "TimeSettingView":
@@ -164,7 +166,7 @@ struct MainView: View {
             .onAppear() {
                 userSettings = UserSettingsManager.shared.loadSettings()
                 if !userSettings.onboardingCompleted {
-                    path.append("SpoilAppSettingView")
+                    path.append("OnBoardingFirstView")
                 }
             }
             .onChange(of: path) { _, newPath in
