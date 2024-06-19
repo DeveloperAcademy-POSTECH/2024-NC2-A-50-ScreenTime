@@ -96,7 +96,7 @@ struct SettingView: View {
                 .cornerRadius(10)
                 .padding(.horizontal, 8)
                 
-                Spacer().frame(height: 14)
+                Spacer().frame(height: 50)
                 
                 LittleTitleView(text: "설정된 시간")
                 
@@ -126,7 +126,7 @@ struct SettingView: View {
                 }
                 
                 
-                Spacer().frame(height: 14)
+                Spacer().frame(height: 50)
                 
                 LittleTitleView(text: "작성된 문구")
                 VStack {
