@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import FamilyControls
 
 struct SpoilAppSettingView: View {
     
     @Binding var path: [String]
+    @Binding var userSettings: UserSettings
+    @State var appPickerPresented = false
+    @State var tempSelection = FamilyActivitySelection()
+    @State var disableButton = true
     
     var body: some View {
         ZStack {
@@ -30,25 +35,62 @@ struct SpoilAppSettingView: View {
                             Spacer()
                             
                             Button(action: {
-                                
+                                appPickerPresented = true
                             }, label: {
                                 VStack(spacing: 0) {
                                     Text("변경")
                                         .font(.system(size: 16, weight: .bold))
                                     Spacer().frame(height: 8)
                                 }
-                            })
+                            }).familyActivityPicker(isPresented: $appPickerPresented, selection: $tempSelection)
                         }
                     }
                 }.padding(.horizontal, 25)
                 
                 
-                HStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(Color.white)
-                        .frame(height: 56)
-                        .padding(.horizontal, 8)
-                }.padding(.horizontal, 8)
+                VStack {
+                    if tempSelection.applicationTokens.isEmpty &&
+                        tempSelection.categoryTokens.isEmpty &&
+                        tempSelection.webDomainTokens.isEmpty {
+                        HStack(alignment: .center) {
+                            Text("앱을 선택하세요.")
+                            Spacer()
+                        }
+                        .frame(height: 50)
+                        .padding(.horizontal, 16)
+                    } else {
+                        VStack {
+                            ForEach(Array(tempSelection.applicationTokens.enumerated()), id: \.element) { index, token in
+                                HStack(alignment: .center) {
+                                    Label(token)
+                                    Spacer()
+                                }
+                                .padding(.horizontal, 20)
+                                
+                                if index < tempSelection.applicationTokens.count - 1 {
+                                    Divider()
+                                }
+                                
+                            }
+                            ForEach(Array(tempSelection.categoryTokens.enumerated()), id: \.element) { index, token in
+                                HStack(alignment: .center) {
+                                    Label(token)
+                                    Spacer()
+                                }
+                                .padding(.horizontal, 16)
+                                
+                                if index < tempSelection.categoryTokens.count - 1 {
+                                    Divider()
+                                }
+                                
+                            }
+                        }.padding(.vertical, 5)
+                    }
+                }
+                .background(.white)
+                .cornerRadius(10)
+                .padding(.horizontal, 8)
+                
                 
                 Spacer().frame(height: 10)
                 
@@ -62,19 +104,35 @@ struct SpoilAppSettingView: View {
                 
 
                 HStack {
-                    Button(action: {
-                        path.append("TimeSettingView")
-                    }, label: {
-                        ZStack{
+                    
+                    if tempSelection.applicationTokens.isEmpty &&
+                        tempSelection.categoryTokens.isEmpty &&
+                        tempSelection.webDomainTokens.isEmpty {
+                        ZStack {
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(height: 56)
-                                .foregroundColor(AppColor.blueActive)
+                                .foregroundColor(AppColor.blackTypo25)
                             
                             Text("다음")
                                 .font(.system(size: 16, weight: .semibold))
                                 .foregroundColor(.white)
                         }
-                    })
+                    } else {
+                        Button(action: {
+                            userSettings.applications = tempSelection
+                            path.append("TimeSettingView")
+                        }, label: {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .frame(height: 56)
+                                    .foregroundColor(AppColor.blueActive)
+                                
+                                Text("다음")
+                                    .font(.system(size: 16, weight: .semibold))
+                                    .foregroundColor(.white)
+                            }
+                        })
+                    }
                 }.padding(.horizontal, 12)
             }
         }

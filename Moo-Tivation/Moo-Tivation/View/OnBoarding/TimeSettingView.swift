@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TimeSettingView: View {
     @Binding var path: [String]
+    @Binding var userSettings: UserSettings
     
     @State private var hours: Int = 2
     @State private var minutes: Int = 30
@@ -62,6 +63,8 @@ struct TimeSettingView: View {
                 
                 HStack {
                     Button(action: {
+                        userSettings.thresholdHour = hours
+                        userSettings.thresholdMinutes = minutes
                         path.append("NotificationSettingView")
                     }, label: {
                         ZStack{

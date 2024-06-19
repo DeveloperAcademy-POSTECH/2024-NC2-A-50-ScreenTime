@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350E96BC2C21E27A0010A5D2 /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1C32C1FD06700C7D203 /* TotalActivityReport.swift */; };
+		350E96BD2C21E29F0010A5D2 /* TotalActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1C52C1FD06700C7D203 /* TotalActivityView.swift */; };
+		350E96BE2C21EDCE0010A5D2 /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A242C217C9D003B1555 /* UserSettingsManager.swift */; };
+		350E96BF2C21EE220010A5D2 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A282C217CD3003B1555 /* UserSettings.swift */; };
+		350E96C22C2202520010A5D2 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350E96C12C2202520010A5D2 /* SettingView.swift */; };
 		3527289D2C1FCCFE00DD859E /* Moo_TivationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3527289C2C1FCCFE00DD859E /* Moo_TivationApp.swift */; };
 		352728A12C1FCCFF00DD859E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352728A02C1FCCFF00DD859E /* Assets.xcassets */; };
 		352728A42C1FCCFF00DD859E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352728A32C1FCCFF00DD859E /* Preview Assets.xcassets */; };
+		3554DAB52C21E1FE00ADFD76 /* MonitoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3554DAB42C21E1FE00ADFD76 /* MonitoringView.swift */; };
 		3570B18E2C1FCDDD00C7D203 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B18D2C1FCDDD00C7D203 /* MainView.swift */; };
 		3570B1C22C1FD06700C7D203 /* ScreenActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1C12C1FD06700C7D203 /* ScreenActivityReport.swift */; };
 		3570B1C42C1FD06700C7D203 /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570B1C32C1FD06700C7D203 /* TotalActivityReport.swift */; };
@@ -30,13 +36,15 @@
 		3574C0A32C1FE9DE003D3592 /* ScreenTimeWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3574C0942C1FE9DD003D3592 /* ScreenTimeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		35FE4A092C204536003B1555 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A082C204536003B1555 /* NotificationManager.swift */; };
 		35FE4A0A2C204536003B1555 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A082C204536003B1555 /* NotificationManager.swift */; };
-		35FE4A112C20488A003B1555 /* MonitoringApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A102C20488A003B1555 /* MonitoringApplication.swift */; };
-		35FE4A122C20488A003B1555 /* MonitoringApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A102C20488A003B1555 /* MonitoringApplication.swift */; };
-		35FE4A132C20488A003B1555 /* MonitoringApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A102C20488A003B1555 /* MonitoringApplication.swift */; };
-		35FE4A142C20488A003B1555 /* MonitoringApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A102C20488A003B1555 /* MonitoringApplication.swift */; };
 		35FE4A192C206B3E003B1555 /* NotificationSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A182C206B3E003B1555 /* NotificationSettingView.swift */; };
 		35FE4A1B2C211E5B003B1555 /* TotalSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A1A2C211E5B003B1555 /* TotalSettingView.swift */; };
 		35FE4A1D2C21206D003B1555 /* LittleTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A1C2C21206D003B1555 /* LittleTitleView.swift */; };
+		35FE4A252C217C9D003B1555 /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A242C217C9D003B1555 /* UserSettingsManager.swift */; };
+		35FE4A262C217C9D003B1555 /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A242C217C9D003B1555 /* UserSettingsManager.swift */; };
+		35FE4A272C217C9D003B1555 /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A242C217C9D003B1555 /* UserSettingsManager.swift */; };
+		35FE4A292C217CD3003B1555 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A282C217CD3003B1555 /* UserSettings.swift */; };
+		35FE4A2A2C217CD3003B1555 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A282C217CD3003B1555 /* UserSettings.swift */; };
+		35FE4A2B2C217CD3003B1555 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A282C217CD3003B1555 /* UserSettings.swift */; };
 		F007611F2C20016F00BAF311 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007611E2C20016F00BAF311 /* Color.swift */; };
 		F0CC6EFC2C202EE900AF233A /* SpoilAppSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC6EFB2C202EE900AF233A /* SpoilAppSettingView.swift */; };
 		F0CC6EFE2C20486100AF233A /* TimeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC6EFD2C20486100AF233A /* TimeSettingView.swift */; };
@@ -93,10 +101,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		350E96C12C2202520010A5D2 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		352728992C1FCCFE00DD859E /* Moo-Tivation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moo-Tivation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3527289C2C1FCCFE00DD859E /* Moo_TivationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moo_TivationApp.swift; sourceTree = "<group>"; };
 		352728A02C1FCCFF00DD859E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		352728A32C1FCCFF00DD859E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3554DAB42C21E1FE00ADFD76 /* MonitoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringView.swift; sourceTree = "<group>"; };
 		3570B18D2C1FCDDD00C7D203 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3570B1912C1FCF9F00C7D203 /* Moo-Tivation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Moo-Tivation.entitlements"; sourceTree = "<group>"; };
 		3570B1982C1FCFB500C7D203 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
@@ -121,10 +131,11 @@
 		3574C0A02C1FE9DE003D3592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3574C0A72C1FE9EF003D3592 /* ScreenTimeWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenTimeWidgetExtension.entitlements; sourceTree = "<group>"; };
 		35FE4A082C204536003B1555 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		35FE4A102C20488A003B1555 /* MonitoringApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringApplication.swift; sourceTree = "<group>"; };
 		35FE4A182C206B3E003B1555 /* NotificationSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingView.swift; sourceTree = "<group>"; };
 		35FE4A1A2C211E5B003B1555 /* TotalSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalSettingView.swift; sourceTree = "<group>"; };
 		35FE4A1C2C21206D003B1555 /* LittleTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleTitleView.swift; sourceTree = "<group>"; };
+		35FE4A242C217C9D003B1555 /* UserSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsManager.swift; sourceTree = "<group>"; };
+		35FE4A282C217CD3003B1555 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		F007611E2C20016F00BAF311 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F0CC6EFB2C202EE900AF233A /* SpoilAppSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoilAppSettingView.swift; sourceTree = "<group>"; };
 		F0CC6EFD2C20486100AF233A /* TimeSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingView.swift; sourceTree = "<group>"; };
@@ -217,6 +228,8 @@
 				35FE4A172C205B83003B1555 /* OnBoarding */,
 				3570B18F2C1FCDFC00C7D203 /* Component */,
 				3570B18D2C1FCDDD00C7D203 /* MainView.swift */,
+				3554DAB42C21E1FE00ADFD76 /* MonitoringView.swift */,
+				350E96C12C2202520010A5D2 /* SettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,6 +239,7 @@
 			children = (
 				3570B1E62C1FD26C00C7D203 /* DeviceActivityManager.swift */,
 				35FE4A082C204536003B1555 /* NotificationManager.swift */,
+				35FE4A242C217C9D003B1555 /* UserSettingsManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -233,7 +247,7 @@
 		3570B18C2C1FCD9F00C7D203 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				35FE4A102C20488A003B1555 /* MonitoringApplication.swift */,
+				35FE4A282C217CD3003B1555 /* UserSettings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -471,20 +485,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0CC6EFE2C20486100AF233A /* TimeSettingView.swift in Sources */,
+				350E96C22C2202520010A5D2 /* SettingView.swift in Sources */,
 				3570B1E12C1FD15700C7D203 /* OnBoardingHeaderView.swift in Sources */,
 				3570B1E72C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
 				35FE4A192C206B3E003B1555 /* NotificationSettingView.swift in Sources */,
 				35FE4A1B2C211E5B003B1555 /* TotalSettingView.swift in Sources */,
 				3570B18E2C1FCDDD00C7D203 /* MainView.swift in Sources */,
 				F0CC6EFC2C202EE900AF233A /* SpoilAppSettingView.swift in Sources */,
-				35FE4A112C20488A003B1555 /* MonitoringApplication.swift in Sources */,
 				3570B1E12C1FD15700C7D203 /* OnBoardingHeaderView.swift in Sources */,
 				3570B1E72C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
+				35FE4A252C217C9D003B1555 /* UserSettingsManager.swift in Sources */,
 				3570B18E2C1FCDDD00C7D203 /* MainView.swift in Sources */,
 				35FE4A092C204536003B1555 /* NotificationManager.swift in Sources */,
+				350E96BC2C21E27A0010A5D2 /* TotalActivityReport.swift in Sources */,
+				350E96BD2C21E29F0010A5D2 /* TotalActivityView.swift in Sources */,
 				3527289D2C1FCCFE00DD859E /* Moo_TivationApp.swift in Sources */,
+				3554DAB52C21E1FE00ADFD76 /* MonitoringView.swift in Sources */,
 				35FE4A1D2C21206D003B1555 /* LittleTitleView.swift in Sources */,
 				F007611F2C20016F00BAF311 /* Color.swift in Sources */,
+				35FE4A292C217CD3003B1555 /* UserSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,10 +511,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35FE4A122C20488A003B1555 /* MonitoringApplication.swift in Sources */,
 				3570B1C62C1FD06700C7D203 /* TotalActivityView.swift in Sources */,
+				350E96BF2C21EE220010A5D2 /* UserSettings.swift in Sources */,
 				3570B1E82C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
 				3570B1C22C1FD06700C7D203 /* ScreenActivityReport.swift in Sources */,
+				350E96BE2C21EDCE0010A5D2 /* UserSettingsManager.swift in Sources */,
 				3570B1C42C1FD06700C7D203 /* TotalActivityReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,9 +525,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3570B1E92C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
+				35FE4A2A2C217CD3003B1555 /* UserSettings.swift in Sources */,
 				35FE4A0A2C204536003B1555 /* NotificationManager.swift in Sources */,
 				3570B1D72C1FD09100C7D203 /* DeviceActivityMonitorExtension.swift in Sources */,
-				35FE4A132C20488A003B1555 /* MonitoringApplication.swift in Sources */,
+				35FE4A262C217C9D003B1555 /* UserSettingsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,9 +536,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35FE4A142C20488A003B1555 /* MonitoringApplication.swift in Sources */,
 				3574C09D2C1FE9DD003D3592 /* ScreenTimeWidget.swift in Sources */,
 				3574C09B2C1FE9DD003D3592 /* ScreenTimeWidgetBundle.swift in Sources */,
+				35FE4A2B2C217CD3003B1555 /* UserSettings.swift in Sources */,
+				35FE4A272C217C9D003B1555 /* UserSettingsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,7 +701,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -711,7 +732,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

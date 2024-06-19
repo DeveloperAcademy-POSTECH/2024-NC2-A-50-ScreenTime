@@ -6,19 +6,22 @@
 //
 
 import Foundation
+import SwiftUI
 import UserNotifications
 
 class NotifiactionManager {
     static let shared = NotifiactionManager()
     private init() {}
     
+    
     // MARK: - 푸시 알림 전송
     func sendNotification(text: String) -> Void {
+        
         UNUserNotificationCenter.current().getNotificationSettings { settings in
             switch settings.authorizationStatus {
             case .authorized, .provisional:
                 let content = UNMutableNotificationContent()
-                content.subtitle = "종료 알림"
+                //content.subtitle = "종료 알림"
                 content.body = text
                 
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1.5, repeats: false)

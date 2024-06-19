@@ -6,10 +6,22 @@
 //
 
 import SwiftUI
+import DeviceActivity
 
 struct MainView: View {
     let segment = ["우유 상태", "완료 여부"]
     
+    @State private var context: DeviceActivityReport.Context = .totalActivity
+    @State private var filter = DeviceActivityFilter(
+        segment: .daily(
+            during: Calendar.current.dateInterval(
+                of: .day,
+                for: .now
+            ) ?? DateInterval()
+        )
+    )
+    
+    @State private var userSettings = UserSettings()
     @State var path: [String] = []
     @State private var segmentpick = 0
     
@@ -30,7 +42,7 @@ struct MainView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        path.append("SpoilAppSettingView")
+                        path.append("SettingView")
                     }, label: {
                         Image(systemName: "gearshape.fill")
                             .resizable()
@@ -46,10 +58,22 @@ struct MainView: View {
                         
                         Spacer().frame(height: 5)
                         
-                        Text("1시간 20분")
-                            .font(.system(size: 40, weight: .heavy))
-                            .foregroundStyle(AppColor.blackTypo100)
-                        
+                        DeviceActivityReport(context, filter: filter)
+                            .onAppear {
+                                filter = DeviceActivityFilter(
+                                    segment: .daily(
+                                        during: Calendar.current.dateInterval(
+                                            of: .day, for: .now
+                                        ) ?? DateInterval()
+                                    ),
+                                    users: .all,
+                                    devices: .init([.iPhone]),
+                                    applications: UserSettingsManager.shared.loadAppTokkens().applicationTokens,
+                                    categories: UserSettingsManager.shared.loadAppTokkens().categoryTokens
+                                )
+                            }
+                            .frame(height: 40)
+
                         Spacer().frame(height: 40)
                         
                         VStack {
@@ -59,7 +83,7 @@ struct MainView: View {
                             
                             Spacer().frame(height: 29)
                             
-                            Text("사용자가 설정한 문구가 나오는 곳")
+                            Text("문구 수정해볼곳")
                                 .font(.system(size: 20, weight: .bold))
                                 .foregroundStyle(AppColor.blackTypo100)
                             
@@ -103,19 +127,27 @@ struct MainView: View {
             }
             .navigationDestination(for: String.self) { value in
                 switch value {
+                case "SettingView":
+                    SettingView(path: $path, userSettings: $userSettings)
                 case "SpoilAppSettingView":
-                    SpoilAppSettingView(path: $path)
+                    SpoilAppSettingView(path: $path, userSettings: $userSettings)
                 case "TimeSettingView":
-                    TimeSettingView(path: $path)
+                    TimeSettingView(path: $path, userSettings: $userSettings)
                 case "NotificationSettingView":
-                    NotificationSettingView(path: $path)
+                    NotificationSettingView(path: $path, userSettings: $userSettings)
                 case "TotalSettingView":
-                    TotalSettingView(path: $path)
+                    TotalSettingView(path: $path, userSettings: $userSettings)
                 default:
                     EmptyView()
                 }
             }
-        }
+            .onAppear() {
+                userSettings = UserSettingsManager.shared.loadSettings()
+                if !userSettings.onboardingCompleted {
+                    path.append("SpoilAppSettingView")
+                }
+            }
+        }.ignoresSafeArea()
     }
 }
 

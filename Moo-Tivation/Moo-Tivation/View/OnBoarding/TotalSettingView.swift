@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct TotalSettingView: View {
-    
     @Binding var path: [String]
+    @Binding var userSettings: UserSettings
+    
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -22,40 +23,86 @@ struct TotalSettingView: View {
                 
                 LittleTitleView(text: "설정된 앱들")
                 
-                HStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(Color.white)
-                        .frame(height: 56)
-                        .padding(.horizontal, 8)
-                }.padding(.horizontal, 8)
+                VStack {
+                    ForEach(Array(userSettings.applications.applicationTokens.enumerated()), id: \.element) { index, token in
+                        HStack(alignment: .center) {
+                            Label(token)
+                            Spacer()
+                        }
+                        .padding(.horizontal, 20)
+                        
+                        if index < userSettings.applications.applicationTokens.count - 1 {
+                            Divider()
+                        }
+                        
+                    }
+                    ForEach(Array(userSettings.applications.categoryTokens.enumerated()), id: \.element) { index, token in
+                        HStack(alignment: .center) {
+                            Label(token)
+                            Spacer()
+                        }
+                        .padding(.horizontal, 16)
+                        
+                        if index < userSettings.applications.categoryTokens.count - 1 {
+                            Divider()
+                        }
+                        
+                    }
+                }
+                .padding(.vertical, 5)
+                .background(.white)
+                .cornerRadius(10)
+                .padding(.horizontal, 8)
                 
                 Spacer().frame(height: 7)
                 
                 LittleTitleView(text: "설정된 시간")
-                
-                HStack {
+                ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .foregroundStyle(Color.white)
-                        .frame(height: 56)
+                        .frame(height: 50)
                         .padding(.horizontal, 8)
-                }.padding(.horizontal, 8)
+                    HStack {
+                        Text("\(userSettings.thresholdHour)시간 \(userSettings.thresholdMinutes)분")
+                        Spacer()
+                    }.padding(.horizontal, 16)
+                }
+                
                 
                 Spacer().frame(height: 7)
                 
                 LittleTitleView(text: "작성된 문구")
-                
-                HStack {
+                ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .foregroundStyle(Color.white)
-                        .frame(height: 56)
+                        .frame(height: 50)
                         .padding(.horizontal, 8)
-                }.padding(.horizontal, 8)
+                    HStack {
+                        Text(userSettings.notificationText)
+                        Spacer()
+                    }.padding(.horizontal, 16)
+                }
                 
                 Spacer()
                 
                 HStack {
                     
                     Button(action: {
+                        
+                        userSettings.onboardingCompleted = true
+                        UserSettingsManager.shared.saveSettings(userSettings)
+                        
+                        let appTokens = UserSettingsManager.shared.loadAppTokkens()
+                        let notificationText = UserSettingsManager.shared.loadNotificationText()
+                        DeviceActivityManager.shared.startDeviceActivityMonitoring(appTokens: appTokens, hour: 1, minute: 1) { result in
+                            switch result {
+                            case .success():
+                                print("성공")
+                            case .failure(let error):
+                                print("실패")
+                            }
+                        }
+                        
                         path.removeLast(path.count)
                     }, label: {
                         ZStack{

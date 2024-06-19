@@ -10,6 +10,9 @@ import DeviceActivity
 // Optionally override any of the functions below.
 // Make sure that your class name matches the NSExtensionPrincipalClass in your Info.plist.
 class DeviceActivityMonitorExtension: DeviceActivityMonitor {
+    
+    let notificationText = UserSettingsManager.shared.loadNotificationText()
+    
     override func intervalDidStart(for activity: DeviceActivityName) {
         super.intervalDidStart(for: activity)
         
@@ -24,7 +27,7 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
     
     override func eventDidReachThreshold(_ event: DeviceActivityEvent.Name, activity: DeviceActivityName) {
         super.eventDidReachThreshold(event, activity: activity)
-        NotifiactionManager.shared.sendNotification(text: "종료 시간 임박!")
+        NotifiactionManager.shared.sendNotification(text: notificationText)
         // Handle the event reaching its threshold.
     }
     
