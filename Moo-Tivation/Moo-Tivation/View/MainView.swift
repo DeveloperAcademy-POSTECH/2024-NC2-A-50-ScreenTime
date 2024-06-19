@@ -83,7 +83,7 @@ struct MainView: View {
                             
                             Spacer().frame(height: 29)
                             
-                            Text(userSettings.notificationText)
+                            Text("문구 수정해볼곳")
                                 .font(.system(size: 20, weight: .bold))
                                 .foregroundStyle(AppColor.blackTypo100)
                             
