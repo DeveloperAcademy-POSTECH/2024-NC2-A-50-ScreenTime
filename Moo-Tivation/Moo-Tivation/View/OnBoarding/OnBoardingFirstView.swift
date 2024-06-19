@@ -36,6 +36,8 @@ struct OnBoardingFirstView: View {
         
         HStack {
             Button(action: {
+                DeviceActivityManager.shared.reqScreenTimePermission()
+                NotifiactionManager.shared.reqNotificationPermission()
                 path.append("SpoilAppSettingView")
             }, label: {
                 ZStack{

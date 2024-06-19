@@ -13,6 +13,28 @@ class NotifiactionManager {
     static let shared = NotifiactionManager()
     private init() {}
     
+    //MARK: 유저노티피케이션 권한 요청
+    func reqNotificationPermission() {
+        let center = UNUserNotificationCenter.current()
+        
+        center.getNotificationSettings { settings in
+            switch settings.alertSetting {
+            case .enabled:
+                print("Notification Permission approved")
+            default:
+                print("not..!")
+                Task {
+                    do {
+                        try await center.requestAuthorization(options: [.alert, .badge, .sound])
+                    } catch {
+                        print("Failed to enroll Aniyah with error: \(error)")
+                    }
+                    
+                }
+            }
+        }
+    }
+    
     
     // MARK: - 푸시 알림 전송
     func sendNotification(text: String) -> Void {
