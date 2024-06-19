@@ -12,6 +12,7 @@ struct SettingView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State var appPickerPresented = false
+    @State var timePickerPresented = false
     @State var tempSelection = FamilyActivitySelection()
     @State var notificationText = ""
     @State var hours = 0
@@ -95,46 +96,37 @@ struct SettingView: View {
                 .cornerRadius(10)
                 .padding(.horizontal, 8)
                 
-                Spacer().frame(height: 7)
+                Spacer().frame(height: 14)
                 
                 LittleTitleView(text: "설정된 시간")
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(Color.white)
-                        .frame(height: 50)
-                        .padding(.horizontal, 8)
-                    HStack {
-                        Text("\(userSettings.thresholdHour)시간 \(userSettings.thresholdMinutes)분")
-                        Spacer()
-                    }.padding(.horizontal, 16)
+                
+                HStack {
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundStyle(Color.white)
+                            .frame(height: 230)
+                            .padding(.horizontal, 8)
+                        
+                        HStack(spacing: 0) {
+                                Picker("", selection: $hours){
+                                    ForEach(0..<12, id: \.self) { i in
+                                                Text("\(i)").tag(i)
+                                    }
+                                        }.pickerStyle(WheelPickerStyle())
+                            Text("시간")
+                                        Picker("", selection: $minutes){
+                                            ForEach(0..<60, id: \.self) { i in
+                                                Text("\(i)").tag(i)
+                                            }
+                                        }.pickerStyle(WheelPickerStyle())
+                            Text("분")
+                        }.padding(.horizontal, 20)
+                    }.padding(.horizontal, 8)
                 }
                 
-//                HStack {
-//                    
-//                    ZStack {
-//                        RoundedRectangle(cornerRadius: 10)
-//                            .foregroundStyle(Color.white)
-//                            .frame(height: 230)
-//                            .padding(.horizontal, 8)
-//                        
-//                        HStack(spacing: 0) {
-//                                Picker("", selection: $hours){
-//                                    ForEach(0..<12, id: \.self) { i in
-//                                                Text("\(i)").tag(i)
-//                                    }
-//                                }.pickerStyle(.)
-//                            Text("시간")
-//                                        Picker("", selection: $minutes){
-//                                            ForEach(0..<60, id: \.self) { i in
-//                                                Text("\(i)").tag(i)
-//                                            }
-//                                        }.pickerStyle(WheelPickerStyle())
-//                            Text("분")
-//                        }.padding(.horizontal, 20)
-//                    }.padding(.horizontal, 8)
-//                }
                 
-                Spacer().frame(height: 7)
+                Spacer().frame(height: 14)
                 
                 LittleTitleView(text: "작성된 문구")
                 VStack {
@@ -157,19 +149,20 @@ struct SettingView: View {
                 HStack {
                     
                     Button(action: {
-                        let newUserSettings = UserSettings(applications: tempSelection, thresholdHour: 2, thresholdMinutes: 30, notificationText: notificationText, onboardingCompleted: true)
+                        //DeviceActivityManager.shared.handleStopDeviceActivityMonitoring()
+                        
+                        let newUserSettings = UserSettings(applications: tempSelection, thresholdHour: hours, thresholdMinutes: minutes, notificationText: notificationText, onboardingCompleted: true)
                         
                         UserSettingsManager.shared.saveSettings(newUserSettings)
                         
                         let appTokens = UserSettingsManager.shared.loadAppTokkens()
-                        let notificationText = UserSettingsManager.shared.loadNotificationText()
-                        DeviceActivityManager.shared.handleStopDeviceActivityMonitoring()
+                        
                         DeviceActivityManager.shared.startDeviceActivityMonitoring(appTokens: appTokens, hour: 1, minute: 1) { result in
                             switch result {
                             case .success():
                                 print("성공")
                             case .failure(let error):
-                                print("실패")
+                                print(error.localizedDescription)
                             }
                         }
                         
@@ -196,6 +189,9 @@ struct SettingView: View {
 
     }
 }
+
+
+
 
 //#Preview {
 //    SettingView()

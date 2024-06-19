@@ -88,18 +88,19 @@ struct TotalSettingView: View {
                 HStack {
                     
                     Button(action: {
+                        DeviceActivityManager.shared.handleStopDeviceActivityMonitoring()
                         
                         userSettings.onboardingCompleted = true
                         UserSettingsManager.shared.saveSettings(userSettings)
                         
                         let appTokens = UserSettingsManager.shared.loadAppTokkens()
-                        let notificationText = UserSettingsManager.shared.loadNotificationText()
+                        
                         DeviceActivityManager.shared.startDeviceActivityMonitoring(appTokens: appTokens, hour: 1, minute: 1) { result in
                             switch result {
                             case .success():
                                 print("성공")
                             case .failure(let error):
-                                print("실패")
+                                print(error.localizedDescription)
                             }
                         }
                         

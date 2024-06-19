@@ -12,6 +12,8 @@
 		350E96BE2C21EDCE0010A5D2 /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A242C217C9D003B1555 /* UserSettingsManager.swift */; };
 		350E96BF2C21EE220010A5D2 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE4A282C217CD3003B1555 /* UserSettings.swift */; };
 		350E96C22C2202520010A5D2 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350E96C12C2202520010A5D2 /* SettingView.swift */; };
+		350E96C72C22BAB50010A5D2 /* TotalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350E96C62C22BAB50010A5D2 /* TotalListView.swift */; };
+		350E96C82C22BAB50010A5D2 /* TotalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350E96C62C22BAB50010A5D2 /* TotalListView.swift */; };
 		3527289D2C1FCCFE00DD859E /* Moo_TivationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3527289C2C1FCCFE00DD859E /* Moo_TivationApp.swift */; };
 		352728A12C1FCCFF00DD859E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352728A02C1FCCFF00DD859E /* Assets.xcassets */; };
 		352728A42C1FCCFF00DD859E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352728A32C1FCCFF00DD859E /* Preview Assets.xcassets */; };
@@ -102,6 +104,7 @@
 
 /* Begin PBXFileReference section */
 		350E96C12C2202520010A5D2 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		350E96C62C22BAB50010A5D2 /* TotalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalListView.swift; sourceTree = "<group>"; };
 		352728992C1FCCFE00DD859E /* Moo-Tivation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moo-Tivation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3527289C2C1FCCFE00DD859E /* Moo_TivationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moo_TivationApp.swift; sourceTree = "<group>"; };
 		352728A02C1FCCFF00DD859E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -288,6 +291,7 @@
 				3570B1C52C1FD06700C7D203 /* TotalActivityView.swift */,
 				3570B1C72C1FD06700C7D203 /* Info.plist */,
 				3570B1C82C1FD06700C7D203 /* ScreenActivityReport.entitlements */,
+				350E96C62C22BAB50010A5D2 /* TotalListView.swift */,
 			);
 			path = ScreenActivityReport;
 			sourceTree = "<group>";
@@ -490,6 +494,7 @@
 				3570B1E72C1FD26C00C7D203 /* DeviceActivityManager.swift in Sources */,
 				35FE4A192C206B3E003B1555 /* NotificationSettingView.swift in Sources */,
 				35FE4A1B2C211E5B003B1555 /* TotalSettingView.swift in Sources */,
+				350E96C72C22BAB50010A5D2 /* TotalListView.swift in Sources */,
 				3570B18E2C1FCDDD00C7D203 /* MainView.swift in Sources */,
 				F0CC6EFC2C202EE900AF233A /* SpoilAppSettingView.swift in Sources */,
 				3570B1E12C1FD15700C7D203 /* OnBoardingHeaderView.swift in Sources */,
@@ -517,6 +522,7 @@
 				3570B1C22C1FD06700C7D203 /* ScreenActivityReport.swift in Sources */,
 				350E96BE2C21EDCE0010A5D2 /* UserSettingsManager.swift in Sources */,
 				3570B1C42C1FD06700C7D203 /* TotalActivityReport.swift in Sources */,
+				350E96C82C22BAB50010A5D2 /* TotalListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

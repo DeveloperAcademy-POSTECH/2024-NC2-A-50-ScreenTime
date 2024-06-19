@@ -14,8 +14,13 @@ struct ScreenActivityReport: DeviceActivityReportExtension {
         // Create a report for each DeviceActivityReport.Context that your app supports.
         TotalActivityReport { totalActivity in
             TotalActivityView(activityReport: totalActivity)
+            //TotalListView(activityReport: totalActivity)
         }
         // Add more reports here...
+        ListReport { totalActivity in
+            //TotalActivityView(activityReport: totalActivity)
+            TotalListView(activityReport: totalActivity)
+        }
     }
 }
 

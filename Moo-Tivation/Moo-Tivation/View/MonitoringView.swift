@@ -9,7 +9,7 @@ import SwiftUI
 import DeviceActivity
 
 struct MonitoringView: View {
-    @State private var context: DeviceActivityReport.Context = .totalActivity
+    @State private var contextsub: DeviceActivityReport.Context = .listActivity
     @State private var filter = DeviceActivityFilter(
         segment: .daily(
             during: Calendar.current.dateInterval(
@@ -19,7 +19,7 @@ struct MonitoringView: View {
         )
     )
     var body: some View {
-        DeviceActivityReport(context, filter: filter)
+        DeviceActivityReport(contextsub, filter: filter)
             .onAppear {
                 filter = DeviceActivityFilter(
                     segment: .daily(
