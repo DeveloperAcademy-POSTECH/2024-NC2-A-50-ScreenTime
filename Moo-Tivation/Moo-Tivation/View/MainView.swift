@@ -9,9 +9,10 @@ import SwiftUI
 import DeviceActivity
 
 struct MainView: View {
-    let segment = ["우유 상태", "완료 여부"]
+    let segment = ["우유 상태", "스포일 앱"]
     
     @State private var context: DeviceActivityReport.Context = .totalActivity
+    @State private var contextsub: DeviceActivityReport.Context = .listActivity
     @State private var filter = DeviceActivityFilter(
         segment: .daily(
             during: Calendar.current.dateInterval(
@@ -52,80 +53,172 @@ struct MainView: View {
                     })
                 }.padding(.trailing, 25)
                 
-                VStack {
-                    VStack(alignment: .leading) {
-                        Text("스포일앱를 사용할 수 있는 시간")
-                            .font(.system(size: 17, weight: .medium))
-                            .foregroundStyle(AppColor.blueTypo)
-                        
-                        Spacer().frame(height: 5)
-                        
-                        DeviceActivityReport(context, filter: filter)
-                            .onAppear {
-                                filter = DeviceActivityFilter(
-                                    segment: .daily(
-                                        during: Calendar.current.dateInterval(
-                                            of: .day, for: .now
-                                        ) ?? DateInterval()
-                                    ),
-                                    users: .all,
-                                    devices: .init([.iPhone]),
-                                    applications: UserSettingsManager.shared.loadAppTokkens().applicationTokens,
-                                    categories: UserSettingsManager.shared.loadAppTokkens().categoryTokens
-                                )
-                            }
-                            .frame(height: 40)
-
-                        Spacer().frame(height: 40)
-                        
-                        VStack {
-                            Image("colbycheese")
-                                .resizable()
-                                .frame(width: 224, height: 224)
-                            
-                            Spacer().frame(height: 29)
-                            
-                            Text("문구 수정해볼곳")
-                                .font(.system(size: 20, weight: .bold))
-                                .foregroundStyle(AppColor.blackTypo100)
-                            
-                        } .frame(maxWidth: .infinity, alignment: .center)
-                        
-                        Spacer().frame(height: 49)
-                        
-                        Text("콜비치즈")
-                            .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(AppColor.blackTypo70)
-                        
-                        Spacer().frame(height: 3)
-                        
-                        Text("프랑스의 노르망디 지방에서 생산되는 부드러운 연질의 \n치즈이다. 카망베르 마을에서 처음 만들어져 그 이름을 땄다.")
-                            .font(.system(size: 13, weight: .regular))
-                            .foregroundStyle(AppColor.blackTypo50)
-                        
-                        Spacer()
-                    }.padding(.horizontal, 44)
-                    
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(.colorTypo15)
-                            .foregroundColor(.white)
-                            .frame(height: 123)
-                            .padding(.horizontal, 20)
-                        
-                        VStack {
-                            Text("내가 설정한 시간")
-                                .font(.system(size: 17, weight: .regular))
+                if segmentpick == 0 {
+                    VStack {
+                        VStack(alignment: .leading) {
+                            Text("스포일앱를 사용할 수 있는 시간")
+                                .font(.system(size: 17, weight: .medium))
                                 .foregroundStyle(AppColor.blueTypo)
                             
-                            Spacer().frame(height: 10)
+                            Spacer().frame(height: 5)
                             
-                            Text("\(userSettings.thresholdHour)시간 \(userSettings.thresholdMinutes)분")
-                                .font(.system(size: 32, weight: .bold))
+                            DeviceActivityReport(context, filter: filter)
+                                .onAppear {
+                                    filter = DeviceActivityFilter(
+                                        segment: .daily(
+                                            during: Calendar.current.dateInterval(
+                                                of: .day, for: .now
+                                            ) ?? DateInterval()
+                                        ),
+                                        users: .all,
+                                        devices: .init([.iPhone]),
+                                        applications: UserSettingsManager.shared.loadAppTokkens().applicationTokens,
+                                        categories: UserSettingsManager.shared.loadAppTokkens().categoryTokens
+                                    )
+                                }
+                                .frame(height: 40)
+
+                            Spacer().frame(height: 40)
+                            
+                            VStack {
+                                Image("colbycheese")
+                                    .resizable()
+                                    .frame(width: 224, height: 224)
+                                
+                                Spacer().frame(height: 29)
+                                
+                                Text("문구 수정해볼곳")
+                                    .font(.system(size: 20, weight: .bold))
+                                    .foregroundStyle(AppColor.blackTypo100)
+                                
+                            } .frame(maxWidth: .infinity, alignment: .center)
+                            
+                            Spacer().frame(height: 49)
+                            
+                            Text("콜비치즈")
+                                .font(.system(size: 16, weight: .medium))
+                                .foregroundStyle(AppColor.blackTypo70)
+                            
+                            Spacer().frame(height: 3)
+                            
+                            Text("프랑스의 노르망디 지방에서 생산되는 부드러운 연질의 \n치즈이다. 카망베르 마을에서 처음 만들어져 그 이름을 땄다.")
+                                .font(.system(size: 13, weight: .regular))
+                                .foregroundStyle(AppColor.blackTypo50)
+                            
+                            Spacer()
+                        }.padding(.horizontal, 44)
+                        
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(.colorTypo15)
+                                .foregroundColor(.white)
+                                .frame(height: 123)
+                                .padding(.horizontal, 20)
+                            
+                            VStack {
+                                Text("내가 설정한 시간")
+                                    .font(.system(size: 17, weight: .regular))
+                                    .foregroundStyle(AppColor.blueTypo)
+                                
+                                Spacer().frame(height: 10)
+                                
+                                Text("\(userSettings.thresholdHour)시간 \(userSettings.thresholdMinutes)분")
+                                    .font(.system(size: 32, weight: .bold))
+                            }
                         }
+                        Spacer().frame(height: 17)
                     }
-                    Spacer().frame(height: 17)
+                } else {
+                    DeviceActivityReport(contextsub, filter: filter)
+                        .onAppear {
+                            filter = DeviceActivityFilter(
+                                segment: .daily(
+                                    during: Calendar.current.dateInterval(
+                                        of: .day, for: .now
+                                    ) ?? DateInterval()
+                                ),
+                                users: .all,
+                                devices: .init([.iPhone]),
+                                applications: UserSettingsManager.shared.loadAppTokkens().applicationTokens,
+                                categories: UserSettingsManager.shared.loadAppTokkens().categoryTokens
+                            )
+                        }
                 }
+                
+//                VStack {
+//                    VStack(alignment: .leading) {
+//                        Text("스포일앱를 사용할 수 있는 시간")
+//                            .font(.system(size: 17, weight: .medium))
+//                            .foregroundStyle(AppColor.blueTypo)
+//                        
+//                        Spacer().frame(height: 5)
+//                        
+//                        DeviceActivityReport(context, filter: filter)
+//                            .onAppear {
+//                                filter = DeviceActivityFilter(
+//                                    segment: .daily(
+//                                        during: Calendar.current.dateInterval(
+//                                            of: .day, for: .now
+//                                        ) ?? DateInterval()
+//                                    ),
+//                                    users: .all,
+//                                    devices: .init([.iPhone]),
+//                                    applications: UserSettingsManager.shared.loadAppTokkens().applicationTokens,
+//                                    categories: UserSettingsManager.shared.loadAppTokkens().categoryTokens
+//                                )
+//                            }
+//                            .frame(height: 40)
+//
+//                        Spacer().frame(height: 40)
+//                        
+//                        VStack {
+//                            Image("colbycheese")
+//                                .resizable()
+//                                .frame(width: 224, height: 224)
+//                            
+//                            Spacer().frame(height: 29)
+//                            
+//                            Text("문구 수정해볼곳")
+//                                .font(.system(size: 20, weight: .bold))
+//                                .foregroundStyle(AppColor.blackTypo100)
+//                            
+//                        } .frame(maxWidth: .infinity, alignment: .center)
+//                        
+//                        Spacer().frame(height: 49)
+//                        
+//                        Text("콜비치즈")
+//                            .font(.system(size: 16, weight: .medium))
+//                            .foregroundStyle(AppColor.blackTypo70)
+//                        
+//                        Spacer().frame(height: 3)
+//                        
+//                        Text("프랑스의 노르망디 지방에서 생산되는 부드러운 연질의 \n치즈이다. 카망베르 마을에서 처음 만들어져 그 이름을 땄다.")
+//                            .font(.system(size: 13, weight: .regular))
+//                            .foregroundStyle(AppColor.blackTypo50)
+//                        
+//                        Spacer()
+//                    }.padding(.horizontal, 44)
+//                    
+//                    ZStack {
+//                        RoundedRectangle(cornerRadius: 10)
+//                            .stroke(.colorTypo15)
+//                            .foregroundColor(.white)
+//                            .frame(height: 123)
+//                            .padding(.horizontal, 20)
+//                        
+//                        VStack {
+//                            Text("내가 설정한 시간")
+//                                .font(.system(size: 17, weight: .regular))
+//                                .foregroundStyle(AppColor.blueTypo)
+//                            
+//                            Spacer().frame(height: 10)
+//                            
+//                            Text("\(userSettings.thresholdHour)시간 \(userSettings.thresholdMinutes)분")
+//                                .font(.system(size: 32, weight: .bold))
+//                        }
+//                    }
+//                    Spacer().frame(height: 17)
+//                }
             }
             .navigationDestination(for: String.self) { value in
                 switch value {

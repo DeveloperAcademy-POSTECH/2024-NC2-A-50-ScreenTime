@@ -27,3 +27,4 @@ struct TotalActivityView: View {
         }
     }
 }
+
