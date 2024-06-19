@@ -25,6 +25,8 @@ struct MainView: View {
     @State var path: [String] = []
     @State private var segmentpick = 0
     
+    @State private var reloadID = UUID()
+    
     var body: some View {
         NavigationStack(path: $path) {
             VStack {
@@ -147,7 +149,15 @@ struct MainView: View {
                     path.append("SpoilAppSettingView")
                 }
             }
-        }.ignoresSafeArea()
+            .onChange(of: path) { _, newPath in
+                if newPath.isEmpty {
+                    reloadID = UUID()
+                    print("redraw")
+                }
+            }
+        }
+        .id(reloadID)
+        .ignoresSafeArea()
     }
 }
 
