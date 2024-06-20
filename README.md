@@ -5,8 +5,8 @@
 <br>
 
 ## 💡 Screen Time
-**Screen Time?**<br>
-Screen Time은 기기의 앱 사용 데이터를 공유 및 추적, 관리하는 것과 관련된 기술입니다.
+> **What is Screen Time?**<br>
+> Screen Time은 기기의 앱 사용 데이터를 공유 및 추적, 관리하는 것과 관련된 기술입니다.
 
 **[기기 사용시간 추적]**<br>
 기기 사용 시간, 앱 서비스, 웹 사이트에 머문 시간을 추적하고 기록, 화면깨우기 등
@@ -22,10 +22,10 @@ Screen Time은 기기의 앱 사용 데이터를 공유 및 추적, 관리하는
 ## 🎯 What we focus on?
 **[앱별 사용량 추적 기능를 고른 이유]**
 - 스크린타임 기능이 기본적으로 사용량 추적을 제공하는 것을 알게 되었을 때, 매우 다양한 아이디어로 확장 할 수 있겠다고 판단했다.
-- 스크린타임이 통제, 제한, 차단하는 기능이 주로 있는데, 듣자마자 강제적이고 부정적인 느낌이 강하게 다가왔다. 따라서, 강한 제어가 아닌 스스로 통제할 수 있게 도와주는 기능에 집중하고 싶었다.
+- 스크린타임이 통제, 제한, 차단하는 기능이 주로 있는데, 듣자마자 강제적이고 부정적인 느낌이 강하게 다가왔다.<br>따라서, 강한 제어가 아닌 스스로 통제할 수 있게 도와주는 기능에 집중하고 싶었다.
 
 **[앱별 사용량 추적 기능을 어떤 식으로 활용했는지]**
-- 사용자가 사용을 줄이고 싶은 앱을 설정, 하루동안 사용할 시간을 선택한다. 스크린타임을 통해 사용량을 추적하고, 설정한 시간이 다가오면 알림을 보내서 인지를 시켜준다.
+- 사용자가 사용을 줄이고 싶은 앱을 설정, 하루동안 사용할 시간을 선택한다.<br>스크린타임을 통해 사용량을 추적하고, 설정한 시간이 다가오면 알림을 보내서 인지를 시켜준다.
 - 알림 문구를 사용자가 직접 설정해서 본인과의 대화, 약속을 지키게 도와준다. 
 
 <br>
@@ -39,8 +39,6 @@ Screen Time은 기기의 앱 사용 데이터를 공유 및 추적, 관리하는
 <br>
 
 ## 🖼️ Prototype
-
-<img width="300" alt="온보딩1" src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-A50-ScreenTime/assets/68256612/e72795bb-08d6-4169-973b-dd6bd1a66bc3">
 
 <img width="300" alt="온보딩2" src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-A50-ScreenTime/assets/68256612/054e40ec-f06c-4a04-b553-b1b9ae620a50">
 
@@ -116,7 +114,7 @@ func startDeviceActivityMonitoring(appTokens: FamilyActivitySelection,
 
 <br>
 
-### DeviceActivityMonitor
+### class DeviceActivityMonitor
 앱들을 모니터링하면서 특정 상황(임계값에 도달 등)에 호출되는 함수들을 관리하는 클래스입니다.
 ```swift
 class DeviceActivityMonitorExtension: DeviceActivityMonitor {
