@@ -4,6 +4,15 @@
 
 <br>
 
+## 👫 Team 김몽리피
+| Name | Gimli | Monfi |
+| :---: | :---: | :---: |
+| Memoji | <img width="200" alt="usecase" src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-A50-ScreenTime/assets/68256612/30ca4480-49d2-4093-9a0f-503d5af99475"> | <img width="200" alt="image" src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-A50-ScreenTime/assets/68256612/e7c9719b-d900-4d74-b698-c162285ab73e">|
+| Role | Design Leader | Tech Leader |
+| GitHub | [@morningfest](https://github.com/morningfest) | [@Monfi98](https://github.com/Monfi98) | 
+
+<br>
+
 ## 💡 Screen Time
 > **What is Screen Time?**<br>
 > Screen Time은 기기의 앱 사용 데이터를 공유 및 추적, 관리하는 것과 관련된 기술입니다.
