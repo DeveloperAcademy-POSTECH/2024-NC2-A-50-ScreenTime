@@ -1,6 +1,6 @@
 # 2024-NC2-A50-ScreenTime
 ## 🎥 Youtube Link
-(추후 만들어진 유튜브 링크 추가)
+https://youtu.be/hilRvg6jYGE?si=8AYvIsLBKZh3jGu0
 
 <br>
 
