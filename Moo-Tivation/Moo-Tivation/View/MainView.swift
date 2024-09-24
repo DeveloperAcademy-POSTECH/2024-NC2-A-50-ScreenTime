@@ -28,6 +28,30 @@ struct MainView: View {
     
     @State private var reloadID = UUID()
     
+    struct DairyChangeInMainView: Identifiable {
+        var id = UUID()
+        var dairyName : String
+        var dairyImage : String
+        var dairyDescription : String
+    }
+    @State private var currentDairy: DairyChangeInMainView = DairyChangeInMainView(dairyName: "", dairyImage: "", dairyDescription: "")
+
+    @State var dairyChangeInMain: [DairyChangeInMainView] = [
+    DairyChangeInMainView(dairyName: "푸른 곰팡이", dairyImage: "dairy_bluemold", dairyDescription: "자낭균류 진정자낭균목 페니실륨속 곰팡이를 통틀어 이르는 말\n부패 작용 또는 독극물에 의한 유해균이 많으며, 페니실린과 같은 유익한 것도 있다."),
+    DairyChangeInMainView(dairyName: "신선한 우유", dairyImage: "dairy_milk", dairyDescription: "영양소가 많아 그대로 마시기도 한다. 오늘날 우유는 치즈, 버터, 크림, 요구르트 등의 다양한 유제품으로 가공되어 널리 소비된다."),
+    DairyChangeInMainView(dairyName: "콜비 잭 치즈", dairyImage: "dairy_colbycheese", dairyDescription: "1960년대 위스콘신 주에서 노란색 콜비 치즈와 하얀색의 몬테레이 잭 치즈를 혼합해서 만든 치즈이다. 벽돌 형식으로 굳힌 뒤에 포장을 해서 판다.")]
+    
+    func updateDairy() {
+        var userHour : Int = userSettings.thresholdHour
+        var userMinite : Int = userSettings.thresholdMinutes
+        
+        if userHour <= 1 && userMinite <= 30 {
+            currentDairy = dairyChangeInMain[2]
+        } else if userHour < 0 && userMinite < 0 {
+            currentDairy = dairyChangeInMain[0]
+        } else {currentDairy = dairyChangeInMain[1]
+        }
+    }
     var body: some View {
         NavigationStack(path: $path) {
             VStack {
@@ -81,13 +105,13 @@ struct MainView: View {
                             Spacer().frame(height: 40)
                             
                             VStack {
-                                Image("colbycheese")
+                                Image("\(currentDairy.dairyImage)")
                                     .resizable()
                                     .frame(width: 224, height: 224)
                                 
                                 Spacer().frame(height: 29)
                                 
-                                Text("문구 수정해볼곳")
+                                Text("\(userSettings.notificationText)")
                                     .font(.system(size: 20, weight: .bold))
                                     .foregroundStyle(AppColor.blackTypo100)
                                 
@@ -95,13 +119,13 @@ struct MainView: View {
                             
                             Spacer().frame(height: 49)
                             
-                            Text("콜비치즈")
+                            Text("\(currentDairy.dairyName)")
                                 .font(.system(size: 16, weight: .medium))
                                 .foregroundStyle(AppColor.blackTypo70)
                             
                             Spacer().frame(height: 3)
                             
-                            Text("프랑스의 노르망디 지방에서 생산되는 부드러운 연질의 \n치즈이다. 카망베르 마을에서 처음 만들어져 그 이름을 땄다.")
+                            Text("\(currentDairy.dairyDescription)")
                                 .font(.system(size: 13, weight: .regular))
                                 .foregroundStyle(AppColor.blackTypo50)
                             
@@ -168,6 +192,7 @@ struct MainView: View {
                 if !userSettings.onboardingCompleted {
                     path.append("OnBoardingFirstView")
                 }
+                updateDairy()
             }
             .onChange(of: path) { _, newPath in
                 if newPath.isEmpty {
